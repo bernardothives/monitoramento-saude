@@ -1,0 +1,79 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite" // Trocar para postgresql no deploy
+  url      = env("DATABASE_URL")
+}
+
+model Departamento {
+  id        String   @id @default(cuid())
+  nome      String   @unique
+  senha     String   @default("123456")
+  isAdmin   Boolean  @default(false) // TRUE apenas para "Planejamento"
+  metas     Meta[]
+  acoes     Acao[]
+  createdAt DateTime @default(now())
+}
+
+model Diretriz {
+  id        String     @id @default(cuid())
+  titulo    String     // Ex: "DIRETRIZ 01: Fortalecer..."
+  descricao String     @default("") // Adicionado conforme JSON
+  objetivos Objetivo[]
+}
+
+model Objetivo {
+  id          String   @id @default(cuid())
+  titulo      String   // Ex: "OBJETIVO 1: Construir..."
+  descricao   String   @default("") // Adicionado conforme JSON
+  diretrizId  String
+  diretriz    Diretriz @relation(fields: [diretrizId], references: [id])
+  metas       Meta[]
+}
+
+model Meta {
+  id             String   @id @default(cuid())
+  numero         String   // Ex: "1.1", "2.1"
+  descricao      String   // Texto descritivo da meta
+  indicadorNome  String   // Nome do indicador
+  unidadeMedida  String   // "Percentual", "Número", etc.
+  linhaBaseAno   Int      // 2024
+  linhaBaseValor Float    // Valor base inicial (convertido de string "89.52%" para 89.52)
+  metaPlano2029  String   // Meta de longo prazo (Texto ou valor)
+  metaFisica2026 Float    // O alvo numérico para o ano corrente
+  
+  objetivoId     String
+  objetivo       Objetivo @relation(fields: [objetivoId], references: [id])
+  
+  departamentoId String
+  departamento   Departamento @relation(fields: [departamentoId], references: [id])
+
+  acoes          Acao[]
+  monitoramentos Monitoramento[]
+}
+
+model Acao {
+  id             String       @id @default(cuid())
+  descricao      String       // Passo a passo da ação
+  metaId         String
+  meta           Meta         @relation(fields: [metaId], references: [id])
+  departamentoId String
+  departamento   Departamento @relation(fields: [departamentoId], references: [id])
+}
+
+model Monitoramento {
+  id             String   @id @default(cuid())
+  quadrimestre   Int      // 1, 2 ou 3
+  ano            Int      @default(2026)
+  valorRealizado Float?   // Preenchido pelo usuário
+  justificativa  String?  // Texto explicativo obrigatório se não atingir a meta
+  statusRAG      String   @default("PENDENTE") // "VERDE", "AMARELO", "VERMELHO"
+  
+  metaId         String
+  meta           Meta     @relation(fields: [metaId], references: [id])
+  updatedAt      DateTime @updatedAt
+  
+  @@unique([metaId, quadrimestre, ano]) // Garante apenas 1 registro por período
+}

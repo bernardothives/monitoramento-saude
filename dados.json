@@ -1,0 +1,2289 @@
+{
+  "departamentos": [
+    {
+      "nome": "Atenção Primária",
+      "diretrizes": [
+        {
+          "id": "01",
+          "descricao": "Fortalecer a atenção primária, ampliando a cobertura de Atenção Primária a Saúde (APS), com vistas à universalização do acesso, à promoção da saúde, à prevenção de doenças e agravos e à redução das desigualdades de acesso, sociais, de raça/etnia e gênero. Esta diretriz está vinculada ao ODS 3, PNS 2024-2027, PES 2024-2027 e às propostas aprovadas nos relatórios finais das Conferências Municipais de Saúde (11ª Conferência Municipal de Saúde de São José, 1ª Conferência Municipal de Saúde Mental de São José, 1ª Conferência Municipal de Gestão do Trabalho e da Educação na Saúde de São José e 1ª Conferência Municipal de Saúde do Trabalhador e da Trabalhadora de São José).",
+          "objetivos": [
+            {
+              "id": "1",
+              "descricao": "Construir, reformar e/ou ampliar a estrutura física das unidades de saúde e dos serviços da rede municipal de saúde.",
+              "metas": [
+                {
+                  "numero": "1.1",
+                  "descricao": "Construir UBS",
+                  "indicador": "UBS contruída",
+                  "valor_base": "0",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "1",
+                  "meta_fisica_2026": "1",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Construir a nova UBS Forquilhinhas, com infraestrutura física e funcional adequada às diretrizes da Política Nacional de Atenção Básica."
+                    }
+                  ]
+                },
+                {
+                  "numero": "1.2",
+                  "descricao": "Ampliar a estrutura física das UBS Fazenda, Areias, Sede, Forquilhas, Procasa, Zanellato, Luar, Sertão do Maruim e Ipiranga.",
+                  "indicador": "UBS ampliadas",
+                  "valor_base": "0",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "9",
+                  "meta_fisica_2026": "9",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Aguardar a conclusão dos trâmites administrativos referentes à emenda parlamentar destinada ao projeto, para subsequente início das etapas de execução previstas no cronograma institucional."
+                    }
+                  ]
+                },
+                {
+                  "numero": "1.3",
+                  "descricao": "Reformar a estrutura física das UBS Serraria, Barreiros, São Luiz.",
+                  "indicador": "UBS reformadas",
+                  "valor_base": "0",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "3",
+                  "meta_fisica_2026": "3",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Aguardando a finalização dos trâmites administrativos vinculados à emenda parlamentar, condição necessária para o início da execução das ações previstas."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "descricao": "Manter as unidades de saúde e serviços da rede municipal de saúde.",
+              "metas": [
+                {
+                  "numero": "2.1",
+                  "descricao": "Manter as UBS.",
+                  "indicador": "UBS mantidas",
+                  "valor_base": "26",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "28",
+                  "meta_fisica_2026": "26",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Intensificar o monitoramento dos critérios que condicionam o repasse dos incentivos financeiros vinculados à produção, ao cadastro no CNES e/ou à habilitação de equipes de Saúde da Família, contemplando programas e financiamento da Atenção Primária, de modo a assegurar a conformidade dos registros e a manutenção dos repasses federais e municipais."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Assegurar a disponibilidade de recursos vinculados e de recursos próprios destinados à manutenção ordinária das Unidades Básicas de Saúde, bem como à cobertura de despesas emergenciais decorrentes de situações de urgências em saúde pública de relevância nacional, estadual ou municipal, garantindo a continuidade e a integralidade das ações de Atenção Primária."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "3",
+              "descricao": "Promover saúde para o cidadão.",
+              "metas": [
+                {
+                  "numero": "3.1",
+                  "descricao": "Ampliar o percentual de cobertura de acompanhamento das condicionalidades de Saúde do Programa Bolsa Família.",
+                  "indicador": "Percentual de cobertura de acompanhamento das condicionalidades de Saúde do Programa Bolsa Família",
+                  "valor_base": "89.52%",
+                  "ano_base": 2024,
+                  "unidade_medida": "Percentual",
+                  "meta_plano_2026_2029": "95.00%",
+                  "meta_fisica_2026": "90.00%",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Monitorar e acompanhar as famílias beneficiárias do PBF no que se refere as condicionalidades de saúde."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Atualizar e qualificar o cadastro das famílias no e-SUS/Prontuário Eletrônico, garantindo o vínculo correto com as equipes de Saúde da Família."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Realizar busca ativa das famílias beneficiárias não acompanhadas, com base nas listas enviadas pelo MDS (Ministério do Desenvolvimento e Assistência Social)."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Capacitar as equipes de saúde sobre o preenchimento correto das informações no sistema e a importância das condicionalidades."
+                    },
+                    {
+                      "id": 5,
+                      "descricao": "Fortalecer a parceria entre saúde e assistência social (CRAS e CREAS), para troca de informações e encaminhamentos."
+                    }
+                  ]
+                },
+                {
+                  "numero": "3.2",
+                  "descricao": "Ampliar a cobertura de APS.",
+                  "indicador": "Cobertura populacional estimada pelas equipes de APS",
+                  "valor_base": "82.22%",
+                  "ano_base": 2024,
+                  "unidade_medida": "Percentual",
+                  "meta_plano_2026_2029": "90.00%",
+                  "meta_fisica_2026": "84.00%",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Homologar os candidatos aprovados no concurso público (previsão: fevereiro de 2026), concluir a composição das equipes atualmente em fase de homologação e promover a ampliação do número de equipes nos territórios cujo quantitativo populacional ultrapassa os parâmetros preconizados pela Política Nacional de Atenção Básica, com o objetivo de adequar a cobertura assistencial e qualificar o acesso da população à Atenção Primária à Saúde."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Implantar o modelo de carga horária de 30 horas assistenciais e 10 horas destinadas a atividades complementares para médicos e enfermeiros das equipes de Estratégia Saúde da Família, com o propósito de otimizar o uso da infraestrutura existente, ampliar o número de equipes em funcionamento e, consequentemente, expandir a cobertura da Atenção Primária à Saúde no município."
+                    }
+                  ]
+                },
+                {
+                  "numero": "3.3",
+                  "descricao": "Ampliar a oferta de preventivo de colo de útero.",
+                  "indicador": "Cobertura de exames citopatológicos do colo do útero em mulheres de 25 a 64 anos na população residente de determinado local e a população da mesma faixa etária",
+                  "valor_base": "54.00%",
+                  "ano_base": 2024,
+                  "unidade_medida": "Percentual",
+                  "meta_plano_2026_2029": "60.00%",
+                  "meta_fisica_2026": "55.00%",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Fortalecer a busca ativa de mulheres com exames em atraso."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Ofertar coleta de preventivo em horários estendidos."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Capacitar as equipes da APS quanto à coleta, registro, encaminhamento e seguimento dos resultados citopatológicos."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Garantir a qualidade dos exames realizados e que os laudos sejam emitidos dentro do prazo estipulado."
+                    },
+                    {
+                      "id": 5,
+                      "descricao": "Implementar campanhas educativas sobre prevenção e importância do exame, com apoio dos ACS e mídias sociais."
+                    },
+                    {
+                      "id": 6,
+                      "descricao": "Monitorar mensalmente os indicadores do Siscan, com devolutiva às equipes sobre cobertura e qualidade das coletas."
+                    },
+                    {
+                      "id": 7,
+                      "descricao": "Identificar UBS com desempenho abaixo da meta e apoiar planos de melhoria."
+                    },
+                    {
+                      "id": 8,
+                      "descricao": "Identificar os motivos que geram o absesteísmo e baixa adesão das mulheres na busca pela rotina em saúde da mulher."
+                    },
+                    {
+                      "id": 9,
+                      "descricao": "Reservar vagas disponíveis em cada unidade visando ofertar a coleta de preventivo em demanda espontânea."
+                    },
+                    {
+                      "id": 10,
+                      "descricao": "Intensificar a busca ativa das mulheres na faixa etária de 25 a 64 anos."
+                    }
+                  ]
+                },
+                {
+                  "numero": "3.4",
+                  "descricao": "Diminuir a proporção de gravidez na adolescência entre as faixas etárias 10 a 19 anos",
+                  "indicador": "Proporção de gravidez na adolescência entre as faixas etárias 10 a 19 anos",
+                  "valor_base": "6.20%",
+                  "ano_base": 2024,
+                  "unidade_medida": "Proporção",
+                  "meta_plano_2026_2029": "5.50%",
+                  "meta_fisica_2026": "6.00%",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Fortalecer junto às equipes de ESF e PSE a necessidade de campanhas e de ações de educação em saúde nas escolas municipais acerca da saúde sexual e reprodutiva."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Disponibilizar e orientar sobre métodos contraceptivos."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Proporcionar atendimento acolhedor e sigiloso aos adolescentes."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Monitorar trimestralmente os dados de nascidos vivos por faixa etária materna."
+                    },
+                    {
+                      "id": 5,
+                      "descricao": "Garantir recurso financeiro suficiente para aquisição de contraceptivos."
+                    },
+                    {
+                      "id": 6,
+                      "descricao": "Assegurar a capacitação das ESF para orientação qualificada acerca da gravidez e IST's com o público alvo."
+                    },
+                    {
+                      "id": 7,
+                      "descricao": "Promover a distribuição gratuita e acessível de preservativos, pílulas anticoncepcionais, DIUs e implantes em unidades básicas de saúde."
+                    },
+                    {
+                      "id": 8,
+                      "descricao": "Fortalecer a atuação intersetorial entre saúde, escola e assistência social."
+                    }
+                  ]
+                },
+                {
+                  "numero": "3.5",
+                  "descricao": "Ampliar a cobertura populacional estimada de saúde bucal na AB.",
+                  "indicador": "Cobertura populacional estimada de saúde bucal na AB.",
+                  "valor_base": "40.59%",
+                  "ano_base": 2024,
+                  "unidade_medida": "Percentual",
+                  "meta_plano_2026_2029": "50.00%",
+                  "meta_fisica_2026": "42.00%",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Ampliar o número de equipes de Saúde Bucal com chamanento de dentistas e técnicos de saúde bucal do concurso (previsto para homolgação fevereiro/2026), adequando assim o número de equipes nos territórios cujo quantitativo populacional está acima do parâmetro preconizado, visando adequar a cobertura e qualificar o acesso da população à Atenção Primária à Saúde."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Capacitar as equipes no registro correto do CELK e/ou outro sistema de PE vigente pois erros de registro subestimam os indicadores."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Implantar o modelo de 30h assistenciais + 10h para as atividades de promoção e prevenção na saúde bucal, visando ampliar o número de equipes com a infraestrutura existente e ampliar a cobertura da ESB."
+                    }
+                  ]
+                },
+                {
+                  "numero": "3.6",
+                  "descricao": "Publicar REMUME atualizada.",
+                  "indicador": "Número de REMUME atualizada publicada.",
+                  "valor_base": "1",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "2",
+                  "meta_fisica_2026": "0",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Ampliar o número de UBS com atendimento com Profissional Farmacêutico."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Publicar Normativa da Assistência Farmacêutica."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Atualização dos POPs das Farmácias Básicas."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Ampliar o número de profissionais técnicos que atuam no suporte das Farmácias Básicas, com intuito de implantar o cuidado farmacêutico."
+                    }
+                  ]
+                },
+                {
+                  "numero": "3.7",
+                  "descricao": "Manter a cobertura de unidades escolares pactuadas no PSE.",
+                  "indicador": "Cobertura de unidades escolares públicas municipais pactuadas no PSE",
+                  "valor_base": "100.00%",
+                  "ano_base": 2024,
+                  "unidade_medida": "Percentual",
+                  "meta_plano_2026_2029": "100.00%",
+                  "meta_fisica_2026": "100.00%",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Fortalecer os laços e ações intersetoriais entre saúde x educação através de um cronograma de reuniões entre as coordenações envolvidas."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Oportunizar ferramentas de troca de informações intersetoriais favorecendo a partilha do cuidado."
+                    }
+                  ]
+                },
+                {
+                  "numero": "3.8",
+                  "descricao": "Ampliar em 5% ao ano a porcentagem de mulheres com início precoce do pré-natal (até 12 semanas de gestação).",
+                  "indicador": "Porcentagem de mulheres com início precoce do pré-natal (até 12 semanas de gestação)",
+                  "valor_base": "1.969 (75,41%)",
+                  "ano_base": 2024,
+                  "unidade_medida": "Percentual",
+                  "meta_plano_2026_2029": "95.00% (recomendações OMS)",
+                  "meta_fisica_2026": "79.18%",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Realizar busca ativa de mulheres em idade fértil com suspeita ou confirmação de gestação, por meio dos ACS."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Orientar sobre registro adequado no prontuário eletrônico."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Ofertar o teste rápido de gravidez para captação precoce da gestante."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Garantir acolhimento imediato à gestante que procura a unidade."
+                    },
+                    {
+                      "id": 5,
+                      "descricao": "Articular com escolas, por meio do PSE, para identificação e encaminhamento de gestantes adolescentes."
+                    },
+                    {
+                      "id": 6,
+                      "descricao": "Acompanhar trimestralmente os dados do SINASC."
+                    },
+                    {
+                      "id": 7,
+                      "descricao": "Identificar UBS com desempenho abaixo da meta e apoiar planos de melhoria."
+                    },
+                    {
+                      "id": 8,
+                      "descricao": "Qualificar os profissionais envolvidos nos processos de captação e de assistência imediata às gestantes, com vistas a assegurar maior celeridade na identificação e no início do acompanhamento pré-natal, fortalecendo a linha de cuidado materno-infantil e aprimorando os desfechos em saúde."
+                    }
+                  ]
+                },
+                {
+                  "numero": "3.9",
+                  "descricao": "Aumentar em 5% ao ano a porcentagem de mulheres com mais de sete consultas de pré-natal.",
+                  "indicador": "Porcentagem de mulheres com mais de sete consultas de pré-natal",
+                  "valor_base": "74.88%",
+                  "ano_base": 2024,
+                  "unidade_medida": "Percentual",
+                  "meta_plano_2026_2029": "mínimo 95% (recomendações OMS)",
+                  "meta_fisica_2026": "80.00%",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Reforçar, junto à UBS, a importância de realizar o monitoramento mensal das gestantes cadastradas para garantir a adesão às consultas."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Reforçar, junto às UBs, a importância de realizar a busca ativa das gestantes faltosas e/ou com consultas em atraso."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Manter agenda aberta para consultas de pré-natal em todas as UBS."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Garantir oferta de exames laboratoriais e ultrassonografias no tempo oportuno."
+                    },
+                    {
+                      "id": 5,
+                      "descricao": "Promover capacitação sobre o protocolo de pré-natal, incluindo riscos gestacionais e boas práticas de registro."
+                    },
+                    {
+                      "id": 6,
+                      "descricao": "Estimular a formação de grupos de gestantes com temas educativos e troca de experiências."
+                    },
+                    {
+                      "id": 7,
+                      "descricao": "Analisar trimestralmente o indicador de consultas de pré-natal."
+                    },
+                    {
+                      "id": 8,
+                      "descricao": "Identificar UBS com desempenho abaixo da meta e apoiar planos de melhoria."
+                    }
+                  ]
+                },
+                {
+                  "numero": "3.10",
+                  "descricao": "Reduzir em 5% ao ano a porcentagem global de cesarianas.",
+                  "indicador": "Porcentagem global de cesarianas",
+                  "valor_base": "1.556 (51,15%)",
+                  "ano_base": 2024,
+                  "unidade_medida": "Percentual",
+                  "meta_plano_2026_2029": "máximo 25% (meta OMS)",
+                  "meta_fisica_2026": "48.59%",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Reforçar a orientação às gestantes do terceiro trimestre, acompanhadas na APS, sobre a importância do parto normal."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Reforçar os benefícios do parto normal durante as consultas de pré natal."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Incentivar as gestantes,durante as consultas de pré-natal e grupos de gestante, a participarem da visita à maternidade."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Enfatizar a necessidade de realizar grupos de gestantes, nas UBS, com temas sobre parto, aleitamento e cuidados com o recém-nascido."
+                    },
+                    {
+                      "id": 5,
+                      "descricao": "Analisar trimestralmente os dados SINASC, identificando a proporção de cesarianas."
+                    }
+                  ]
+                },
+                {
+                  "numero": "3.11",
+                  "descricao": "Implantar 01 Consultório na Rua.",
+                  "indicador": "Consultório de rua implantnado.",
+                  "valor_base": "0",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "1",
+                  "meta_fisica_2026": "0",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Reavaliar periodicamente as necessidades de saúde da população em situação de rua no território, identificando novos grupos, demandas ou áreas não cobertas."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Garantir aos usuários acesso facilitado e continuado às Unidades Básicas de Saúde (UBS) de referência, construindo fluxos claros de encaminhamento e contrarreferência."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Utilizar sistemas de registro eletrônico para facilitar o acompanhamento dos usuários e a geração de dados para avaliação."
+                    }
+                  ]
+                },
+                {
+                  "numero": "3.12",
+                  "descricao": "Reduzir em 2% ao ano o percentual de Internação por condição sensível a APS (ICSAP).",
+                  "indicador": "Percentual de Internação por condição sensível a APS (ICSAP)",
+                  "valor_base": "31.05%",
+                  "ano_base": 2024,
+                  "unidade_medida": "Percentual",
+                  "meta_plano_2026_2029": "28.64%",
+                  "meta_fisica_2026": "30.43%",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Traçar o perfil epidemiológico do território, por meio de parcerias intersetoriais e ações articuladas com o Núcleo de Educação Permanente em Saúde, promovendo pesquisas e estudos científicos que subsidiem a formulação de estratégias mais assertivas e alinhadas às características e necessidades da população."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Ampliar as ações de educação permanente das equipes, com foco no aprimoramento técnico, no alinhamento e clareza dos fluxos institucionais e no fortalecimento do conhecimento sobre a rede de atenção à saúde, visando qualificar processos de trabalho e favorecer a resolutividade da assistência."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Ampliar o número de pessoas acompanhadas pelo Programa Municipal de Controle do Tabagismo, com foco na qualificação das equipes de Atenção Primária e fortalecimento da oferta de grupos e atendimentos individuais para cessação do tagagismo."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Assegurar acompanhamento adequado aos pacientes hipertensos e/ou diabéticos, com fornecimento de medicamentos e insumos, visando ao controle da doença e à melhoria da qualidade de vida."
+                    },
+                    {
+                      "id": 5,
+                      "descricao": "Fortalecer ações integradas de educação em saúde e prática de atividades físicas, em parceria com as equipes de Saúde da Família (ESF) e a equipe multiprofissional (EMULTI), visando à prevenção e promoção da saúde, ao controle das doenças crônicas não transmissíveis e à melhoria da qualidade de vida, com destaque para a redução do sedentarismo e o fortalecimento do bem-estar físico, mental e social."
+                    },
+                    {
+                      "id": 6,
+                      "descricao": "Garantir o acompanhamento regular de pacientes com doenças crônicas não transmissíveis, assegurando consultas periódicas, realização de exames de controle e atuação integrada das equipes de Saúde da Família nas áreas de abrangência."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "03",
+          "descricao": "Reduzir e controlar doenças e agravos passíveis de prevenção e controle, com enfoque na superação das desigualdades de acesso, sociais, de raça/etnia e gênero. Esta diretriz está vinculada ao ODS 3, PNS 2024-2027, PES 2024-2027 e às propostas aprovadas nos relatórios finais das Conferências Municipais de Saúde (11ª Conferência Municipal de Saúde de São José, 1ª Conferência Municipal de Saúde Mental de São José, 1ª Conferência Municipal de Gestão do Trabalho e da Educação na Saúde de São José e 1ª Conferência Municipal de Saúde do Trabalhador e da Trabalhadora de São José).",
+          "objetivos": [
+            {
+              "id": "2",
+              "descricao": "Realizar ações para reduzir e prevenir os riscos relacionados à saúde da população.",
+              "metas": [
+                {
+                  "numero": "2.1",
+                  "descricao": "Reduzir a Taxa de Mortalidade Infantil em São José.",
+                  "indicador": "Taxa de Mortalidade Infantil",
+                  "valor_base": "8,91/1000 NV",
+                  "ano_base": 2024,
+                  "unidade_medida": "Taxa",
+                  "meta_plano_2026_2029": "7/1000 NV",
+                  "meta_fisica_2026": "8.5",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Capacitar os profissionais para realizar o atendimento as gestantes e crianças conforme os protocolos Saúde da Mulher e da Criança vigentes."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Promover o acesso oportuno aos serviços de saúde na atenção ao pré-natal, parto e puerpério."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Garantir que todas as gestantes tenham início precoce de pré-natal, com visitas regulares, identificação de risco gestacional, USG, monitorização adequada."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Acompanhar os casos de gestação de alto risco (ex: hipertensão, diabetes, parto prematuro) com equipe multiprofissional."
+                    },
+                    {
+                      "id": 5,
+                      "descricao": "Acompanhar na UBS o recém-nascido e mãe nos primeiros dias de vida, com checagem de aleitamento materno, vacinação, peso, crescimento e desenvolvimento."
+                    },
+                    {
+                      "id": 6,
+                      "descricao": "Acompanhar os casos de gestação de alto risco (ex: hipertensão, diabetes, parto prematuro) com equipe multiprofissional."
+                    },
+                    {
+                      "id": 7,
+                      "descricao": "Promover o aleitamento materno exclusivo até os 6 meses, e complementar até 2 anos ou mais."
+                    },
+                    {
+                      "id": 8,
+                      "descricao": "Assegurar encaminhamento para maternidade de referência quando necessário, e acompanhamento pós-parto imediato para a mãe e o recém-nascido."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.2",
+                  "descricao": "Reduzir o número de óbitos maternos em São José.",
+                  "indicador": "Número de óbitos maternos em determinado período e local de residência",
+                  "valor_base": "2",
+                  "ano_base": 2024,
+                  "unidade_medida": "Taxa",
+                  "meta_plano_2026_2029": "0",
+                  "meta_fisica_2026": "0",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Assegurar que toda gestante seja captada precocemente (preferencialmente antes da 12ª semana) e inicie pré-natal com equipe multiprofissional."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Garantir o mínimo recomendado de consultas de pré-natal."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Realizar busca ativa de gestantes que faltam consultas ou que estão em situação de risco."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Identificar e monitorar fatores de risco materno (ex: hipertensão, diabetes, obesidade, gravidez de alto risco, idade materna avançada, múltiplas gestações)."
+                    },
+                    {
+                      "id": 6,
+                      "descricao": "Monitorar e atender adequadamente mulheres no puerpério (até 42 dias e mais, se necessário) para detectar complicações tardias."
+                    },
+                    {
+                      "id": 7,
+                      "descricao": "Acompanhar os casos de gestação de alto risco (ex: hipertensão, diabetes, parto prematuro) com equipe multiprofissional."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.4",
+                  "descricao": "Reduzir para Zero o número de casos de Aids em menores de 5 anos de idade em São José.",
+                  "indicador": "Número de casos novos de Aids em menores de 5 anos",
+                  "valor_base": "1",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "0",
+                  "meta_fisica_2026": "0",
+                  "acoes": [
+                    {
+                      "id": 3,
+                      "descricao": "Promover a realização de testagem rápida da puérpera para diminuir a exposição de crianças na amamentação."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.5",
+                  "descricao": "Reduzir a taxa de mortalidade por Aids em 2% ao ano.",
+                  "indicador": " Taxa de mortalidade por Aids ",
+                  "valor_base": "7,76/100.0000 habitantes",
+                  "ano_base": 2024,
+                  "unidade_medida": "Taxa",
+                  "meta_plano_2026_2029": "7",
+                  "meta_fisica_2026": "7.6",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Realizar busca ativa de todos os pacientes em abandono de tratamento."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Ampliar a testagem rápida com demanda espontânea em todas as Unidades de Saúde."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.6",
+                  "descricao": "Reduzir o número de casos de sífilis congênita em menores de 1 ano de idade em São José.",
+                  "indicador": "Número de casos novos de sífilis congênita em menores de 1 ano de idade",
+                  "valor_base": "20",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "1",
+                  "meta_fisica_2026": "15",
+                  "acoes": [
+                    {
+                      "id": 4,
+                      "descricao": "Intensificar as testagens rápidas de sífilis no terceiro trimestre de gestação, preferencialmente da 28ª a 30ª semanas."
+                    },
+                    {
+                      "id": 5,
+                      "descricao": "Ampliar a solicitação de coleta de VDRL nas gestantes com sífilis nas unidades de saúde."
+                    },
+                    {
+                      "id": 6,
+                      "descricao": "Monitorar todas as gestantes com sífilis até o puerpério."
+                    },
+                    {
+                      "id": 7,
+                      "descricao": "Monitorar todas as crianças nascidas de mãe com sífilis até 2 exames de VDRL negativos consecutivos."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.7",
+                  "descricao": "Reduzir a taxa de mortalidade prematura (de 30 a 69 anos) pelo conjunto das quatro principais doenças crônicas não transmissíveis (doenças do aparelho circulatório, câncer, diabetes e doenças respiratórias crônicas) em 2% ao ano.",
+                  "indicador": "Taxa de mortalidade prematura (de 30 a 69 anos) pelo conjunto das quatro principais doenças crônicas não transmissíveis (doenças do aparelho circulatório, câncer, diabetes e doenças respiratórias crônicas) ",
+                  "valor_base": "257,79/100.000,00 habitantes",
+                  "ano_base": 2024,
+                  "unidade_medida": "Taxa",
+                  "meta_plano_2026_2029": "237.77",
+                  "meta_fisica_2026": "252.63",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Implantar o protocolo de Doenças Crônicas não Transmissíveis (DCNT) na Secretaria de Saúde de São José. "
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Manter e fortalecer ações intersetoriais em parceria com PSE na área de DCNT."
+                    },
+                    {
+                      "id": 5,
+                      "descricao": "Acompanhar taxas de mortalidade por doenças cardiovasculares, câncer, diabetes e respiratórias por faixa etária (30–69 anos)."
+                    },
+                    {
+                      "id": 6,
+                      "descricao": "Estabelecer indicadores e metas anuais de redução da mortalidade e monitorar o cumprimento (meta: -2% ao ano)."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.10",
+                  "descricao": "Aumentar a proporção de vacinas selecionadas do Calendário Nacional de Vacinação para crianças menores de dois anos de idade - Pentavalente 3ª dose, Pneumocócica 10-valente 2ª dose, Poliomielite 3ª dose e Tríplice viral 1ª dose - com cobertura vacinal preconizada.",
+                  "indicador": "Proporção de vacinas selecionadas do Calendário Nacional de Vacinação para crianças menores de dois anos de idade - Pentavalente 3ª dose, Pneumocócica 10-valente 2ª dose, Poliomielite 3ª dose e Tríplice viral 1ª dose - com cobertura vacinal preconizada.",
+                  "valor_base": "25%",
+                  "ano_base": 2024,
+                  "unidade_medida": "Percentual",
+                  "meta_plano_2026_2029": "100%",
+                  "meta_fisica_2026": "100%",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Incentivar a busca ativa, pela APS, dos pacientes faltosos para atualização do calendário vacinal infantil."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Estimular as equipes da APS a identificarem famílias com recusas ou barreiras persistentes à vacinação e a elaborarem estratégias específicas de abordagem."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Construir procedimentos operacionais padrão (POP) que orientem formalmente as ações de busca ativa."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Incentivar ações extramuros em pontos estratégicos, como escolas, para captação do público-alvo."
+                    },
+                    {
+                      "id": 7,
+                      "descricao": "Estimular as equipes para que, durante atendimentos de pediatria, puericultura e enfermagem, realizem a verificação sistemática da caderneta vacinal e encaminhem a criança à sala de vacinas diante da necessidade."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.17",
+                  "descricao": "Reduzir a taxa de mortalidade por DCNT em 2% ao ano.",
+                  "indicador": "Taxa de mortalidade por DCNT",
+                  "valor_base": "334,19/100.000 habitantes",
+                  "ano_base": 2024,
+                  "unidade_medida": "Taxa",
+                  "meta_plano_2026_2029": "308.25",
+                  "meta_fisica_2026": "327.51",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Implementar programas de rastreamento de hipertensão, diabetes e obesidade na atenção primária."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Implementar protocolos clínicos e diretrizes terapêuticas para hipertensão, diabetes e obesidade na atenção primária e especialidades."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Atenção Especializada",
+      "diretrizes": [
+        {
+          "id": "01",
+          "descricao": "Fortalecer a atenção primária, ampliando a cobertura de Atenção Primária a Saúde (APS), com vistas à universalização do acesso, à promoção da saúde, à prevenção de doenças e agravos e à redução das desigualdades de acesso, sociais, de raça/etnia e gênero. Esta diretriz está vinculada ao ODS 3, PNS 2024-2027, PES 2024-2027 e às propostas aprovadas nos relatórios finais das Conferências Municipais de Saúde (11ª Conferência Municipal de Saúde de São José, 1ª Conferência Municipal de Saúde Mental de São José, 1ª Conferência Municipal de Gestão do Trabalho e da Educação na Saúde de São José e 1ª Conferência Municipal de Saúde do Trabalhador e da Trabalhadora de São José).",
+          "objetivos": [
+            {
+              "id": "2",
+              "descricao": "Manter as unidades de saúde e serviços da rede municipal de saúde.",
+              "metas": [
+                {
+                  "numero": "2.2",
+                  "descricao": "Manter os CEO.",
+                  "indicador": "CEO mantidos",
+                  "valor_base": "2",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "2",
+                  "meta_fisica_2026": "2",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Promover a mudança de CEO Tipo I para Tipo II."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Chamar concursados da especializada e recolocar os atuantes no CEO (que são concursados pela básica) para atendimento na Atenção Primária, aumetando a oferta de ESB nos territórios."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Monitorar e avaliar os indicadores de desempenho."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Aprimorar a qualidade assistencial."
+                    },
+                    {
+                      "id": 5,
+                      "descricao": "Manter gestão de recursos de insumos/infraestrurtura e humanos."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "02",
+          "descricao": "Ampliar a oferta e o acesso às ações e serviços da Atenção Especializada, conforme as necessidades de saúde da população, reduzindo as desigualdades de acesso, sociais, de raça/etnia e gênero. Esta diretriz está vinculada ao ODS 3, PNS 2024-2027, PES 2024-2027 e às propostas aprovadas nos relatórios finais das Conferências Municipais de Saúde (11ª Conferência Municipal de Saúde de São José, 1ª Conferência Municipal de Saúde Mental de São José, 1ª Conferência Municipal de Gestão do Trabalho e da Educação na Saúde de São José e 1ª Conferência Municipal de Saúde do Trabalhador e da Trabalhadora de São José).",
+          "objetivos": [
+            {
+              "id": "2",
+              "descricao": "Manter as unidades de saúde e serviços da rede municipal de saúde.",
+              "metas": [
+                {
+                  "numero": "2.1",
+                  "descricao": "Manter as unidades e serviços da atenção especializada.",
+                  "indicador": "Unidades e serviços especializados mantidos",
+                  "valor_base": "15",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "15",
+                  "meta_fisica_2026": "15",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Disponibilizar recursos vinculados e próprios para a manutenção ordinária das unidades e serviços da atenção especializada, bem como, em situações de emergência em saúde pública de importância nacional/estadual/municipal."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.2",
+                  "descricao": "Manter  as unidades móveis do SAMU.",
+                  "indicador": "Unidades móveis do SAMU",
+                  "valor_base": "3",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "3",
+                  "meta_fisica_2026": "3",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Manter a composição mínima de 100% das unidades."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Garantir condições técnicas e operacionais das Unidades Móveis."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Fortalecer as ações de educação permanente para os profissionais."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "3",
+              "descricao": "Construir, reformar e/ou ampliar a estrutura física das unidades de saúde e dos serviços da rede municipal de saúde.",
+              "metas": [
+                {
+                  "numero": "3.1",
+                  "descricao": "Construir UPA.",
+                  "indicador": "UPA construída",
+                  "valor_base": "1",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "1",
+                  "meta_fisica_2026": "0",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Identificar meios para captação de recurso financeiro, através de emendas parlamentares."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Identificar junto a procuradoria geral do Município a viabilidade da área de construção."
+                    }
+                  ]
+                },
+                {
+                  "numero": "3.2",
+                  "descricao": "Construir 02 CAPS.",
+                  "indicador": "CAPS construídos",
+                  "valor_base": "3",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "2",
+                  "meta_fisica_2026": "4",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Identificar meios para captação de recurso financeiro, através de emendas parlamentares."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Identificar junto a procuradoria geral do Município a viabilidade da área de construção."
+                    }
+                  ]
+                },
+                {
+                  "numero": "3.3",
+                  "descricao": "Implantar o Centro de Autismo II para criança acima de seis anos e adolescentes.",
+                  "indicador": "Centro de Autismo II implantado",
+                  "valor_base": "1",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "1",
+                  "meta_fisica_2026": "0",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Identificar meios para captação de recurso financeiro junto ao MS."
+                    }
+                  ]
+                },
+                {
+                  "numero": "3.4",
+                  "descricao": "Implantar o Programa Melhor em casa.",
+                  "indicador": "Programa Melhor em casa implantado",
+                  "valor_base": "0",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "1",
+                  "meta_fisica_2026": "0",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Elaborar o estudo do impacto financeiro para a implantação do programa."
+                    }
+                  ]
+                },
+                {
+                  "numero": "3.5",
+                  "descricao": "Construir 01 hospital municipal por meio de parceria público privada com no mínimo de 70% dos atendimentos SUS até 2028.",
+                  "indicador": "Hospital municipal por meio de parceria público privada construído",
+                  "valor_base": "0",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "1",
+                  "meta_fisica_2026": "0",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Avaliar a viabilidade financeira para a implantação do hospital municipal."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Pactuar responsabilidades e fontes de financiamento."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Regulação",
+      "diretrizes": [
+        {
+          "id": "02",
+          "descricao": "Ampliar a oferta e o acesso às ações e serviços da Atenção Especializada, conforme as necessidades de saúde da população, reduzindo as desigualdades de acesso, sociais, de raça/etnia e gênero. Esta diretriz está vinculada ao ODS 3, PNS 2024-2027, PES 2024-2027 e às propostas aprovadas nos relatórios finais das Conferências Municipais de Saúde (11ª Conferência Municipal de Saúde de São José, 1ª Conferência Municipal de Saúde Mental de São José, 1ª Conferência Municipal de Gestão do Trabalho e da Educação na Saúde de São José e 1ª Conferência Municipal de Saúde do Trabalhador e da Trabalhadora de São José).",
+          "objetivos": [
+            {
+              "id": "1",
+              "descricao": "Promover saúde para o cidadão.",
+              "metas": [
+                {
+                  "numero": "1.1",
+                  "descricao": "Ampliar em 2% ao ano o número de exames ofertados na rede municipal de saúde.",
+                  "indicador": "Percentual de exames ofertados na rede municipal de saúde",
+                  "valor_base": "1.338.398 (SIA)",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "2% ao ano",
+                  "meta_fisica_2026": "1365166",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Credenciar Prestadores de serviços para realização de exames."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Aumentar a capacidade de realização de exames."
+                    }
+                  ]
+                },
+                {
+                  "numero": "1.2",
+                  "descricao": "Ampliar em 2% ao ano a oferta de mamografia de rastreamento realizados em mulheres de 50 a 69 anos na população residente  da mesma faixa etária.",
+                  "indicador": "Razão de exames de mamografia de rastreamento realizados em mulheres de 50 a 69 anos na população residente da mesma faixa etária",
+                  "valor_base": "5.689/32.297= 0,18  (SISMAMA)",
+                  "ano_base": 2024,
+                  "unidade_medida": "Razão",
+                  "meta_plano_2026_2029": "2% ao ano",
+                  "meta_fisica_2026": "0.1836",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Intensifiar a busca ativa de mulheres na fiaxa etária de 50 a 69 anos."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Publicizar para as equipes de saúde as metas de cobertura de realização de exame de mamografia de acordo com a população alvo ao exame de acordo com a unidade de saúde."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Contratar prestadores de Mamografia com sede no Município de São José."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Garantir recursos financeiros para que a oferta de mamografia atenda a demanda."
+                    },
+                    {
+                      "id": 5,
+                      "descricao": "Utilizar recursos tecnológicos para conscientização da população via SMS e midias sociais."
+                    },
+                    {
+                      "id": 6,
+                      "descricao": "Monitorar os indicadores de realização de mamografia."
+                    },
+                    {
+                      "id": 7,
+                      "descricao": "Informar a equipe de ESF o percentual de mulheres com o exame de mamografia realizado de acordo com a população alvo."
+                    },
+                    {
+                      "id": 8,
+                      "descricao": "Monitorar e acompanhar as mulheres com exames alterados que constam no SISCAN."
+                    },
+                    {
+                      "id": 9,
+                      "descricao": "Estabelecer parcerias com organizações locais para alcançar mulheres em áreas de difícil acesso quanto à realização de mamografia e detecção precoce do câncer de mama."
+                    },
+                    {
+                      "id": 10,
+                      "descricao": "Promover encontros educativos nas UBS e comunidades para sensibilização quanto à realização de mamografia e detecção precoce do câncer de mama."
+                    }
+                  ]
+                },
+                {
+                  "numero": "1.3",
+                  "descricao": "Reduzir em 5% ao ano o número de pacientes aguardando a realização de exames há mais de 365 dias, até 2029.",
+                  "indicador": "Número de pacientes aguardando a realização de exames a mais de 365 dias",
+                  "valor_base": "40492",
+                  "ano_base": 2024,
+                  "unidade_medida": "Percentual",
+                  "meta_plano_2026_2029": "5% ao ano",
+                  "meta_fisica_2026": "38467",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Credenciar Prestadores de serviços para realização de exames."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Aumentar a capacidade de realização de exames."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Manter rotina de confirmação prévia de exames com 24 horas de antecedência nas Policlínicas."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Reaproveitar, em tempo real, as vagas liberadas por meio da confirmação prévia."
+                    },
+                    {
+                      "id": 5,
+                      "descricao": "Monitorar mensalmente as taxas de absenteísmo."
+                    }
+                  ]
+                },
+                {
+                  "numero": "1.4",
+                  "descricao": "Ampliar a oferta de consultas nas especialidades, em 2% ao ano.",
+                  "indicador": "Número de consultas nas especialidades",
+                  "valor_base": "79.357 (SIA- médicos e não médicos)",
+                  "ano_base": 2024,
+                  "unidade_medida": "Percentual",
+                  "meta_plano_2026_2029": "2% ao ano",
+                  "meta_fisica_2026": "80944",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Reorganizar a agenda médica com base em indicadores de absenteísmo e aproveitamento."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Promover pactuações com outros municípios e faculdades para ampliação da rede referenciada."
+                    }
+                  ]
+                },
+                {
+                  "numero": "1.5",
+                  "descricao": "Reduzir em 5% ao ano o número de pacientes aguardando a realização de consultas há mais de 365 dias, até 2029.",
+                  "indicador": "Número de pacientes aguardando a realização de consultas a mais de 365 dias",
+                  "valor_base": "5674",
+                  "ano_base": 2024,
+                  "unidade_medida": "Percentual",
+                  "meta_plano_2026_2029": "5% ao ano",
+                  "meta_fisica_2026": "5390",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Manter rotina de confirmação prévia de consultas com 24 horas de antecedência nas Policlínicas."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Reaproveitar, em tempo real, as vagas liberadas por meio da confirmação prévia."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Monitorar mensalmente as taxas de absenteísmo."
+                    }
+                  ]
+                }    
+              ]
+            }
+          ]
+        },
+        {
+          "id": "04",
+          "descricao": " Aprimorar o cuidado à saúde, fortalecendo a gestão estratégica do SUS, do trabalho e da educação em saúde, intensificando a incorporação da inovação e da saúde digital. Esta diretriz está vinculada ao ODS 3, PNS 2024-2027, PES 2024-2027 e às propostas aprovadas nos relatórios finais das Conferências Municipais de Saúde (11ª Conferência Municipal de Saúde de São José, 1ª Conferência Municipal de Saúde Mental de São José, 1ª Conferência Municipal de Gestão do Trabalho e da Educação na Saúde de São José e 1ª Conferência Municipal de Saúde do Trabalhador e da Trabalhadora de São José)",
+          "objetivos": [
+            {
+              "id": "1",
+              "descricao": "Promover inovação através da saúde digital.",
+              "metas": [
+                {
+                  "numero": "1.1",
+                  "descricao": "Ampliar de 06 para 07 o número de especialidades com teleconsultorias compulsórias reguladas.",
+                  "indicador": "Número de especialidades com teleconsultorias compulsória reguladas.",
+                  "valor_base": "6",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "7",
+                  "meta_fisica_2026": "6",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Identificar especialidade com maior volume de encaminhamentos evitáveis para inclusão no programa."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Monitorar mensalmente indicadores de resolutividade das teleconsultorias."
+                    }
+                  ]
+                },
+                {
+                  "numero": "1.2",
+                  "descricao": "Implantar teleconsulta nas especialidades e na APS.",
+                  "indicador": "Teleconsulta nas especialidades e na APS.",
+                  "valor_base": "0",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "2",
+                  "meta_fisica_2026": "1",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Implantar infraestrutura tecnológica mínima nas unidades participantes (equipamentos, conectividade)."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Definir protocolos clínicos e fluxos de agendamento para teleconsultas."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Identificar a especialidade com maior viabilidade técnica e assistencial para implantação inicial da teleconsulta, considerando volume de demanda, perfil dos casos e resolutividade."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Selecionar uma Unidade Básica de Saúde piloto para implementação da teleconsulta, avaliando infraestrutura, conectividade e disponibilidade das equipes."
+                    }
+                  ]
+                }    
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Vigilância Epidemiológica",
+      "diretrizes": [
+        {
+          "id": "03",
+          "descricao": "Reduzir e controlar doenças e agravos passíveis de prevenção e controle, com enfoque na superação das desigualdades de acesso, sociais, de raça/etnia e gênero. Esta diretriz está vinculada ao ODS 3, PNS 2024-2027, PES 2024-2027 e às propostas aprovadas nos relatórios finais das Conferências Municipais de Saúde (11ª Conferência Municipal de Saúde de São José, 1ª Conferência Municipal de Saúde Mental de São José, 1ª Conferência Municipal de Gestão do Trabalho e da Educação na Saúde de São José e 1ª Conferência Municipal de Saúde do Trabalhador e da Trabalhadora de São José).",
+          "objetivos": [
+            {
+              "id": "1",
+              "descricao": "Manter as unidades de saúde e serviços da rede municipal de saúde.",
+              "metas": [
+                {
+                  "numero": "1.1",
+                  "descricao": "Manter as unidades e serviços da Vigilância em Saúde. ",
+                  "indicador": "Unidades e serviços de Vigilância em Saúde mantidos",
+                  "valor_base": "5",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "5",
+                  "meta_fisica_2026": "5",
+                  "acoes": [
+                    {
+                      "id": 5,
+                      "descricao": "Manter o funcionamento dos CTAs de Serraria e Bela Vista."
+                    },
+                    {
+                      "id": 6,
+                      "descricao": "Manter a unidade do Centro de Vigilancia em Saúde."
+                    },
+                    {
+                      "id": 7,
+                      "descricao": "Implantar um CTA."
+                    },
+                    {
+                      "id": 8,
+                      "descricao": "Disponibilizar recursos vinculados e próprios para a manutenção ordinária das unidades e serviços da vigilância em saúde (VISA e VIEP), bem como, em situações de emergência em saúde pública de importância nacional/estadual/municipal."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "descricao": "Realizar ações para reduzir e prevenir os riscos relacionados à saúde da população.",
+              "metas": [
+                {
+                  "numero": "2.1",
+                  "descricao": "Reduzir a Taxa de Mortalidade Infantil em São José.",
+                  "indicador": "Taxa de Mortalidade Infantil",
+                  "valor_base": "8,91/1000 NV",
+                  "ano_base": 2024,
+                  "unidade_medida": "Taxa",
+                  "meta_plano_2026_2029": "7/1000 NV",
+                  "meta_fisica_2026": "8.5",
+                  "acoes": [
+                    {
+                      "id": 9,
+                      "descricao": "Manter o fornecimento de fórmula infantil às crianças expostas ao HIV."
+                    },
+                    {
+                      "id": 10,
+                      "descricao": "Manter as sala de vacinas municipais para alcance da cobertura vacinal dos imunizantes do calendário vacinal anual da criança."
+                    },
+                    {
+                      "id": 11,
+                      "descricao": "Manter e fortalecer a Comissão multiprofissional de Análise de óbitos maternos, fetais e infantis."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.2",
+                  "descricao": "Reduzir o número de óbitos maternos em São José.",
+                  "indicador": "Número de óbitos maternos em determinado período e local de residência",
+                  "valor_base": "2",
+                  "ano_base": 2024,
+                  "unidade_medida": "Taxa",
+                  "meta_plano_2026_2029": "0",
+                  "meta_fisica_2026": "0",
+                  "acoes": [
+                    {
+                      "id": 5,
+                      "descricao": "Realizar vigilância de óbitos maternos, investigações de cada caso para identificar causas e fatores evitáveis."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.3",
+                  "descricao": "Aumentar a proporção de óbitos de mulheres em idade fértil (10 a 49 anos) investigados.",
+                  "indicador": "Proporção de óbitos de mulheres em idade fértil (10 a 49 anos) investigados",
+                  "valor_base": "83.11%",
+                  "ano_base": 2024,
+                  "unidade_medida": "Percentual",
+                  "meta_plano_2026_2029": "100%",
+                  "meta_fisica_2026": "100%",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Garantir notificação imediata de todo óbito de mulher de 10 a 49 anos no Sistema de Informação de Mortalidade (SIM)."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Monitorar semanalmente os casos pendentes para evitar atrasos."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Monitorar a qualidade do preenchimento das Declarações de Óbito (DO) — especialmente campos sobre gravidez atual, parto e puerpério."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Investigar todos os óbitos de mulher em idade fértil em até 120 dias após a notificação, conforme recomendação do Ministério da Saúde."
+                    },
+                    {
+                      "id": 5,
+                      "descricao": "Manter o encerramento oportuno das investigações no SIM."
+                    },
+                    {
+                      "id": 6,
+                      "descricao": "Elaborar boletim com análise dos óbitos de mulheres em idade fértil dos últimos cinco anos, identificando fatores de risco."
+                    },
+                    {
+                      "id": 7,
+                      "descricao": "Manter e fortalecer a Comissão multiprofissional de Análise de óbitos."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.4",
+                  "descricao": "Reduzir para Zero o número de casos de Aids em menores de 5 anos de idade em São José.",
+                  "indicador": "Número de casos novos de Aids em menores de 5 anos",
+                  "valor_base": "1",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "0",
+                  "meta_fisica_2026": "0",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Monitorar todas as gestantes HIV desde o pré-natal até o puerpério."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Monitorar todas as crianças nascidas de mãe portadora de HIV até os 18 meses de idade."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Ampliar a divulgação sobre a Profilaxia Pré-Exposição (PREP) e Profilaxia Pós-Exposição (PEP) realizada no Centro de Vigilância em Saúde (CVS), UPA e nas UBS."
+                    },
+                    {
+                      "id": 5,
+                      "descricao": "Ampliar a PREP em outros estabelecimentos de saúde da rede de atenção municipal para além do CVS e Ambula trans."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.5",
+                  "descricao": "Reduzir a taxa de mortalidade por Aids em 2% ao ano.",
+                  "indicador": "Taxa de mortalidade por Aids",
+                  "valor_base": "7,76/100.0000 habitantes",
+                  "ano_base": 2024,
+                  "unidade_medida": "Taxa",
+                  "meta_plano_2026_2029": "7",
+                  "meta_fisica_2026": "7.6",
+                  "acoes": [
+                    {
+                      "id": 3,
+                      "descricao": "Manter a realização de Profilaxia Pós Exposição (PEP) em todas as Unidades de Saúde."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Ampliar a Profilaxia Pré-Exposição (PREP) para além do CVS e Ambula Trans."
+                    },
+                    {
+                      "id": 5,
+                      "descricao": "Promover o acesso ou ações à testagem da população vulnerável (profissionais do sexo, situação de rua, usuário de drogas, crianças e adolescentes do centro socioeducativo)."
+                    },
+                    {
+                      "id": 6,
+                      "descricao": "Ampliar a corresponsabilização da APS nos casos de HIV/AIDS."
+                    },
+                    {
+                      "id": 7,
+                      "descricao": "Manter o comitê de investigação de óbitos por AIDS."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.6",
+                  "descricao": "Reduzir o número de casos de sífilis congênita em menores de 1 ano de idade em São José.",
+                  "indicador": "Número de casos novos de sífilis congênita em menores de 1 ano de idade",
+                  "valor_base": "20",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "1",
+                  "meta_fisica_2026": "15",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Manter atualizada a planilha de monitoramento da Sífilis do Muncipio."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Aprovar e implementar o protocolo de atenção à Sífilis e Sífilis Congênita."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Manter as reuniões do Comitê de Transmissão Vertical no município."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.7",
+                  "descricao": "Reduzir a taxa de mortalidade prematura (de 30 a 69 anos) pelo conjunto das quatro principais doenças crônicas não transmissíveis (doenças do aparelho circulatório, câncer, diabetes e doenças respiratórias crônicas) em 2% ao ano.",
+                  "indicador": "Taxa de mortalidade prematura (de 30 a 69 anos) pelo conjunto das quatro principais doenças crônicas não transmissíveis (doenças do aparelho circulatório, câncer, diabetes e doenças respiratórias crônicas) ",
+                  "valor_base": "257,79/100.000,00 habitantes",
+                  "ano_base": 2024,
+                  "unidade_medida": "Taxa",
+                  "meta_plano_2026_2029": "237.77",
+                  "meta_fisica_2026": "252.63",
+                  "acoes": [
+                    {
+                      "id": 3,
+                      "descricao": "Implantar o Registro de Câncer de Base Populacional (RCBP)."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Manter vigilância epidemiológica das DCNT e seus fatores de risco (tabagismo, sedentarismo, obesidade, hipertensão, diabetes)."
+                    },
+                    {
+                      "id": 7,
+                      "descricao": "Elaborar boletim com análise dos óbitos pelo conjunto das quatro principais doenças crônicas não transmissíveis."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.8",
+                  "descricao": "Manter a proporção de cura dos casos novos de hanseníase diagnosticados nos anos das coortes.",
+                  "indicador": "Proporção de cura dos casos novos de hanseníase diagnosticados nos anos das coortes",
+                  "valor_base": "100%",
+                  "ano_base": 2024,
+                  "unidade_medida": "Percentual",
+                  "meta_plano_2026_2029": "100%",
+                  "meta_fisica_2026": "100%",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Ampliar a proporção de contatos intradomiciliares dos casos novos de hanseníase examinados nos anos de coorte."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Examinar 90% ou mais de contatos intradomicliares dos casos novos de hanseníase."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Promover comunicação eficiente entre UBS e CVS para garantir adesão ao tratamento, especialmente, nos casos de vulnerabilidade social."
+                    },
+                    {
+                      "id": 5,
+                      "descricao": "Ampliar o diagnóstico de hanseníase no município."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.9",
+                  "descricao": "Aumentar a proporção do registro de óbitos com causa básica definida.",
+                  "indicador": "Proporção do registro de óbitos com causa básica definida",
+                  "valor_base": "98.90%",
+                  "ano_base": 2024,
+                  "unidade_medida": "Percentual",
+                  "meta_plano_2026_2029": "100%",
+                  "meta_fisica_2026": "100%",
+                  "acoes": [
+                    {
+                      "id": 2,
+                      "descricao": "Garantir notificação oportuna e completa de todos os óbitos no SIM."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Manter a proporção de óbitos investigados por causa básica definida maior ou igual ao alcançado anteriormente."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Assegurar que a investigação seja concluída e lançada no SIM dentro do prazo (idealmente até 30 dias)."
+                    },
+                    {
+                      "id": 5,
+                      "descricao": "Manter e fortalecer o fluxo de investigação de óbitos mal definidos, conforme protocolo do Ministério da Saúde."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.10",
+                  "descricao": "Aumentar a proporção de vacinas selecionadas do Calendário Nacional de Vacinação para crianças menores de dois anos de idade - Pentavalente 3ª dose, Pneumocócica 10-valente 2ª dose, Poliomielite 3ª dose e Tríplice viral 1ª dose - com cobertura vacinal preconizada.",
+                  "indicador": "Proporção de vacinas selecionadas do Calendário Nacional de Vacinação para crianças menores de dois anos de idade - Pentavalente 3ª dose, Pneumocócica 10-valente 2ª dose, Poliomielite 3ª dose e Tríplice viral 1ª dose - com cobertura vacinal preconizada.",
+                  "valor_base": "25%",
+                  "ano_base": 2024,
+                  "unidade_medida": "Percentual",
+                  "meta_plano_2026_2029": "100%",
+                  "meta_fisica_2026": "100%",
+                  "acoes": [
+                    {
+                      "id": 5,
+                      "descricao": "Construir procedimentos operacionais padrão (POP) que orientem formalmente as ações extramuros."
+                    },
+                    {
+                      "id": 6,
+                      "descricao": "Ampliar o número de profissionais capacitados para atuação em sala de vacina."
+                    },
+                    {
+                      "id": 8,
+                      "descricao": "Retomar o Comitê de Atividades de Vacinação de Alta Qualidade (AVAQ)."
+                    },
+                    {
+                      "id": 9,
+                      "descricao": "Manter alinhamento contínuo entre a Secretaria de Saúde (Imunização e PSE) e a Secretaria de Educação para ampliação da cobertura vacinal por meio de ações ou estrátégias direcionadas. "
+                    },
+                    {
+                      "id": 10,
+                      "descricao": "Fortalecer o alinhamento com a Secretaria de Comunicação para planejar e divulgar chamadas informativas sobre vacinação nas mídias oficiais, ampliando o alcance das ações e favorecendo a adesão das famílias."
+                    },
+                    {
+                      "id": 11,
+                      "descricao": "Monitorar periodicamente a base ministerial SIPNI e DEMAS (Departamento de Monitoramento, Avaliação e Disseminação de Informações Estratégicas em Saúde) para averiguar os dados municipais de imunização e o alcance da cobertura."
+                    },
+                    {
+                      "id": 12,
+                      "descricao": "Realizar correção das doses aplicadas e não homologadas no SIPNI, bem como revisão de inconsistências nos registros, garantindo que a cobertura vacinal reflita adequadamente a realidade local."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.11",
+                  "descricao": "Manter a proporção de casos de doenças de notificação compulsória imediata (DNCI) encerrados em até 60 dias após notificação.",
+                  "indicador": "Proporção de casos de doenças de notificação compulsória imediata (DNCI) encerrados em até 60 dias após notificação.",
+                  "valor_base": "90%",
+                  "ano_base": 2024,
+                  "unidade_medida": "Percentual",
+                  "meta_plano_2026_2029": "100%",
+                  "meta_fisica_2026": "100%",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Garantir equipe técnica suficiente e capacitada para a investigação e encerramento dos casos em tempo oportuno."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Manter rotina de monitoramento semanal dos casos notificados e pendentes de encerramento."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Realizar treinamentos periódicos para profissionais das Unidades Básicas de Saúde (UBS), UPA, hospitais, laboratórios e serviços privados."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Atualizar constantemente sobre mudanças no rol de doenças de notificação compulsória e protocolos de investigação."
+                    },
+                    {
+                      "id": 5,
+                      "descricao": "Assegurar que toda notificação de DNCI seja recebida e avaliada em até 24 horas."
+                    },
+                    {
+                      "id": 6,
+                      "descricao": "Encerrar em até 60 dias após a notificação, os casos de doenças de notificação compulsória imediata."
+                    },
+                    {
+                      "id": 7,
+                      "descricao": "Realizar revisões mensais das fichas com pendências e causas de atraso."
+                    },
+                    {
+                      "id": 8,
+                      "descricao": "Assegurar coleta, transporte e envio adequado de amostras biológicas dentro dos prazos definidos."
+                    },
+                    {
+                      "id": 10,
+                      "descricao": "Manter comunicação imediata (telefone, WhatsApp institucional, e-mail oficial) entre os serviços notificadores e a vigilância epidemiológica."
+                    },
+                    {
+                      "id": 11,
+                      "descricao": "Criar rotina semanal de conferência dos casos em aberto no SINAN."
+                    },
+                    {
+                      "id": 12,
+                      "descricao": "Garantir integração entre vigilância e laboratórios públicos/privados para emissão rápida de resultados."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.13",
+                  "descricao": "Manter a proporção de preenchimento do campo ocupação nas notificações de agravos relacionados ao trabalho.",
+                  "indicador": "Proporção de preenchimento do campo ocupação nas notificações de agravos relacionados ao trabalho.",
+                  "valor_base": "100%",
+                  "ano_base": 2024,
+                  "unidade_medida": "Percentual",
+                  "meta_plano_2026_2029": "100%",
+                  "meta_fisica_2026": "100%",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Realizar treinamentos periódicos com profissionais de saúde (UBS, hospitais, UPA, serviços de urgência e vigilância) sobre a importância de registrar corretamente a ocupação do trabalhador nas fichas do SINAN."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Realizar análise mensal das notificações no SINAN para identificar fichas com campos “ocupação” em branco, ignorados ou incorretos."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Identificar as ocupações que apresentam maiores incidências de agravos relacionados ao trabalho."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Manter a qualificação dos dados apresentados na ficha de notificação e investigação."
+                    },
+                    {
+                      "id": 5,
+                      "descricao": "Realizar investigação de acidentes de trabalho leves e graves com exposição a todos os fatores de risco: fisicos, quimicos e biológicos, por meio de uso de ferramentas de comunicação instantânea com os serviços de saúde e trabalhador (ex. whatsapp)."
+                    },
+                    {
+                      "id": 6,
+                      "descricao": "Incorporar o tema “vigilância dos agravos relacionados ao trabalho” nas ações de educação permanente do município."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.14",
+                  "descricao": "Aumentar o percentual de cura de casos novos de tuberculose.",
+                  "indicador": "Percentual de cura de casos novos de tuberculose",
+                  "valor_base": "58.66%",
+                  "ano_base": 2024,
+                  "unidade_medida": "Percentual",
+                  "meta_plano_2026_2029": "85%",
+                  "meta_fisica_2026": "60%",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Diagnosticar 85% dos casos novos estimados de tuberculose."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Ampliar a taxa de cura de novos casos de tuberculose pulmonar bacilífera para 85%."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Reduzir a mortalidade de coinfectados por TB e HIV."
+                    },
+                    {
+                      "id": 5,
+                      "descricao": "Facilitar o acesso dos sintomáticos respiratórios ao atendimento e ao exame diagnóstico, mantendo a coleta do exame de escarro nas UBS."
+                    },
+                    {
+                      "id": 6,
+                      "descricao": "Fortalecer parceria com a equipe de consultório na rua para a realização de TDO em pacientes em situação de rua."
+                    },
+                    {
+                      "id": 7,
+                      "descricao": "Estimular a realização de TDO na APS, sobretudo nos casos de difícil adesão ou de vulnerabilidade social."
+                    },
+                    {
+                      "id": 8,
+                      "descricao": "Promover atendimento domiciliar (VD) para os casos com dificuldade de mobilidade/acamados."
+                    },
+                    {
+                      "id": 9,
+                      "descricao": "Ofertar o tratamento preventivo da tuberculose aos grupos com indicação."
+                    },
+                    {
+                      "id": 10,
+                      "descricao": "Testar para HIV todo caso de TB."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.15",
+                  "descricao": "Reduzir em 2% ao ano a taxa de incidência de arboviroses (dengue, chikungunya, Zika).",
+                  "indicador": "Taxa de incidência  de arboviroses.",
+                  "valor_base": "428,00/100.000 habitantes",
+                  "ano_base": 2024,
+                  "unidade_medida": "Taxa",
+                  "meta_plano_2026_2029": "394.77",
+                  "meta_fisica_2026": "419.44",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Promover a mobilização da população para a eliminação diária de água parada em suas residências e quintais (manter caixas d'água tampadas, garrafas viradas para baixo, pneus recolhidos, calhas limpas, colocar areia nos pratos de vasos de plantas, etc.)."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Realizar a aplicação de larvicida e inseticidas em áreas de risco, quando necessário, para bloquear a transmissão."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Realizar a notificação e autuação de imóveis com reincidência de criadouros conforme legislação municipal."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Intensificar as visitas domiciliares dos agentes de combate a endemias (ACE) para identificar e eliminar focos, além de orientar os moradores, pois a colaboração dos moradores é essencial."
+                    },
+                    {
+                      "id": 5,
+                      "descricao": "Promover parcerias intersetoriais, envolvendo diferentes setores (educação, meio ambiente, etc.) e a comunidade na prevenção e controle das doenças."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.16",
+                  "descricao": "Reduzir a taxa de mortalidade por causa externa em 2% ao ano.",
+                  "indicador": "Taxa de mortalidade por causa externa",
+                  "valor_base": "48,97/100.000 habitantes",
+                  "ano_base": 2024,
+                  "unidade_medida": "Taxa",
+                  "meta_plano_2026_2029": "45.17",
+                  "meta_fisica_2026": "47.99",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Manter registro completo e atualizado de óbitos por causas externas no SIM."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Monitorar tendências de mortalidade por faixa etária, gênero, local e tipo de evento."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.17",
+                  "descricao": "Reduzir a taxa de mortalidade por DCNT em 2% ao ano.",
+                  "indicador": "Taxa de mortalidade por DCNT",
+                  "valor_base": "334,19/100.000 habitantes",
+                  "ano_base": 2024,
+                  "unidade_medida": "Taxa",
+                  "meta_plano_2026_2029": "308.25",
+                  "meta_fisica_2026": "327.51",
+                  "acoes": [
+                    {
+                      "id": 3,
+                      "descricao": "Promover screening de cânceres mais prevalentes (mama, colo de útero, próstata, colorretal) conforme protocolos do Ministério da Saúde."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Vigilância Sanitária",
+      "diretrizes": [
+        {
+          "id": "03",
+          "descricao": "Reduzir e controlar doenças e agravos passíveis de prevenção e controle, com enfoque na superação das desigualdades de acesso, sociais, de raça/etnia e gênero. Esta diretriz está vinculada ao ODS 3, PNS 2024-2027, PES 2024-2027 e às propostas aprovadas nos relatórios finais das Conferências Municipais de Saúde (11ª Conferência Municipal de Saúde de São José, 1ª Conferência Municipal de Saúde Mental de São José, 1ª Conferência Municipal de Gestão do Trabalho e da Educação na Saúde de São José e 1ª Conferência Municipal de Saúde do Trabalhador e da Trabalhadora de São José).",
+          "objetivos": [
+            {
+              "id": "1",
+              "descricao": "Manter as unidades de saúde e serviços da rede municipal de saúde.",
+              "metas": [
+                {
+                  "numero": "1.1",
+                  "descricao": "Manter as unidades e serviços da Vigilância em Saúde. ",
+                  "indicador": "Unidades e serviços de Vigilância em Saúde mantidos",
+                  "valor_base": "5",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "5",
+                  "meta_fisica_2026": "5",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Elaborar e aprovar código sanitário Municipal."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Implantar o setor de análise de projeto básico de arquitetura de estabelecimento de saúde."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Implantar o serviço de sobreaviso e plantão fiscal."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Criar projeto de lei para a criação dos seguintes cargos de fiscais na SMS nas áreas de: engenharia sanitária, engenharia civil, arquitetura e de nível médio para técnico em saneamento."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "descricao": "Realizar ações para reduzir e prevenir os riscos relacionados à saúde da população.",
+              "metas": [
+                {
+                  "numero": "2.12",
+                  "descricao": "Aumentar a proporção de análises realizadas em amostras de água para consumo humano quanto aos parâmetros coliformes totais, cloro residual livre e turbidez.",
+                  "indicador": "Proporção de análises realizadas em amostras de água para consumo humano quanto aos parâmetros coliformes totais, cloro residual livre e turbidez",
+                  "valor_base": "95.93",
+                  "ano_base": 2024,
+                  "unidade_medida": "Percentual",
+                  "meta_plano_2026_2029": "100%",
+                  "meta_fisica_2026": "100%",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Realizar as análises das amostras de água para consumo humano quanto aos parâmetros coliformes totais, cloro residual livre e turbidez conforme norma vigente."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Monitorar as análises do Estado quanto às análises municipais realizadas."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.18",
+                  "descricao": "Ampliar a capacidade de enfrentamento às emergências de saúde pública por meio de ações de preparação e vigilância e resposta nas unidades de saúde.",
+                  "indicador": "Plano de Enfrentamento às emergências de saúde pública elaborado.",
+                  "valor_base": "1",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "0",
+                  "meta_fisica_2026": "1",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Instrumentalizar o Grupo de Trabalho multissetorial para o enfrentamento às emergências em saúde pública."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Realizar revisões anuais ou após eventos relevantes, incorporando lições aprendidas, atualizações técnicas e ajustes operacionais."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Educação Permanente do SUS",
+      "diretrizes": [
+        {
+          "id": "03",
+          "descricao": "Reduzir e controlar doenças e agravos passíveis de prevenção e controle, com enfoque na superação das desigualdades de acesso, sociais, de raça/etnia e gênero. Esta diretriz está vinculada ao ODS 3, PNS 2024-2027, PES 2024-2027 e às propostas aprovadas nos relatórios finais das Conferências Municipais de Saúde (11ª Conferência Municipal de Saúde de São José, 1ª Conferência Municipal de Saúde Mental de São José, 1ª Conferência Municipal de Gestão do Trabalho e da Educação na Saúde de São José e 1ª Conferência Municipal de Saúde do Trabalhador e da Trabalhadora de São José).",
+          "objetivos": [
+            {
+              "id": "2",
+              "descricao": "Realizar ações para reduzir e prevenir os riscos relacionados à saúde da população.",
+              "metas": [
+                {
+                  "numero": "2.7",
+                  "descricao": "Reduzir a taxa de mortalidade prematura (de 30 a 69 anos) pelo conjunto das quatro principais doenças crônicas não transmissíveis (doenças do aparelho circulatório, câncer, diabetes e doenças respiratórias crônicas) em 2% ao ano.",
+                  "indicador": "Taxa de mortalidade prematura (de 30 a 69 anos) pelo conjunto das quatro principais doenças crônicas não transmissíveis (doenças do aparelho circulatório, câncer, diabetes e doenças respiratórias crônicas) ",
+                  "valor_base": "257,79/100.000,00 habitantes",
+                  "ano_base": 2024,
+                  "unidade_medida": "Taxa",
+                  "meta_plano_2026_2029": "237.77",
+                  "meta_fisica_2026": "252.63",
+                  "acoes": [
+                    {
+                      "id": 8,
+                      "descricao": "Capacitar as equipes de Saúde da Família para o manejo das DCNT e dos fatores de risco."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.8",
+                  "descricao": "Manter a proporção de cura dos casos novos de hanseníase diagnosticados nos anos das coortes.",
+                  "indicador": "Proporção de cura dos casos novos de hanseníase diagnosticados nos anos das coortes",
+                  "valor_base": "100%",
+                  "ano_base": 2024,
+                  "unidade_medida": "Percentual",
+                  "meta_plano_2026_2029": "100%",
+                  "meta_fisica_2026": "100%",
+                  "acoes": [
+                    {
+                      "id": 3,
+                      "descricao": "Capacitar periodicamente os profissionais de saúde acerca do atendimento ao paciente suspeito ou confirmado de hanseníase."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.9",
+                  "descricao": "Aumentar a proporção do registro de óbitos com causa básica definida.",
+                  "indicador": "Proporção do registro de óbitos com causa básica definida",
+                  "valor_base": "98.90%",
+                  "ano_base": 2024,
+                  "unidade_medida": "Percentual",
+                  "meta_plano_2026_2029": "100%",
+                  "meta_fisica_2026": "100%",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Capacitar médicos (da rede pública e privada) para o correto preenchimento da Declaração de Óbito, especialmente nos campos da causa básica, imediata e intermediária."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.11",
+                  "descricao": "Manter a proporção de casos de doenças de notificação compulsória imediata (DNCI) encerrados em até 60 dias após notificação.",
+                  "indicador": "Proporção de casos de doenças de notificação compulsória imediata (DNCI) encerrados em até 60 dias após notificação.",
+                  "valor_base": "90%",
+                  "ano_base": 2024,
+                  "unidade_medida": "Percentual",
+                  "meta_plano_2026_2029": "100%",
+                  "meta_fisica_2026": "100%",
+                  "acoes": [
+                    {
+                      "id": 9,
+                      "descricao": "Capacitar técnicos no uso correto do SINAN NET e SINAN ONLINE, evitando erros de digitação e duplicidades."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.14",
+                  "descricao": "Aumentar o percentual de cura de casos novos de tuberculose.",
+                  "indicador": "Percentual de cura de casos novos de tuberculose",
+                  "valor_base": "58.66%",
+                  "ano_base": 2024,
+                  "unidade_medida": "Percentual",
+                  "meta_plano_2026_2029": "85%",
+                  "meta_fisica_2026": "60%",
+                  "acoes": [
+                    {
+                      "id": 4,
+                      "descricao": "Capacitar a rede de atenção à saúde de São José para identificação de casos de TB, busca de sintomáticos respiratórios e tratamento oportuno."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.16",
+                  "descricao": "Reduzir a taxa de mortalidade por causa externa em 2% ao ano.",
+                  "indicador": "Taxa de mortalidade por causa externa",
+                  "valor_base": "48,97/100.000 habitantes",
+                  "ano_base": 2024,
+                  "unidade_medida": "Taxa",
+                  "meta_plano_2026_2029": "45.17",
+                  "meta_fisica_2026": "47.99",
+                  "acoes": [
+                    {
+                      "id": 2,
+                      "descricao": "Promover capacitações sobre prevenção à violência doméstica e sexual, incluindo acolhimento e denúncia."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.17",
+                  "descricao": "Reduzir a taxa de mortalidade por DCNT em 2% ao ano.",
+                  "indicador": "Taxa de mortalidade por DCNT",
+                  "valor_base": "334,19/100.000 habitantes",
+                  "ano_base": 2024,
+                  "unidade_medida": "Taxa",
+                  "meta_plano_2026_2029": "308.25",
+                  "meta_fisica_2026": "327.51",
+                  "acoes": [
+                    {
+                      "id": 4,
+                      "descricao": "Capacitar profissionais da APS em identificação precoce, manejo clínico e educação em saúde para DCNT."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "04",
+          "descricao": " Aprimorar o cuidado à saúde, fortalecendo a gestão estratégica do SUS, do trabalho e da educação em saúde, intensificando a incorporação da inovação e da saúde digital. Esta diretriz está vinculada ao ODS 3, PNS 2024-2027, PES 2024-2027 e às propostas aprovadas nos relatórios finais das Conferências Municipais de Saúde (11ª Conferência Municipal de Saúde de São José, 1ª Conferência Municipal de Saúde Mental de São José, 1ª Conferência Municipal de Gestão do Trabalho e da Educação na Saúde de São José e 1ª Conferência Municipal de Saúde do Trabalhador e da Trabalhadora de São José)",
+          "objetivos": [
+            {
+              "id": "3",
+              "descricao": "Fortalecer as ações da Política de Educação Permanente em Saúde e Gestão do Trabalho.",
+              "metas": [
+                {
+                  "numero": "3.1",
+                  "descricao": "Produzir e implantar Protocolos de atenção a saúde e de organização de processo de trabalho para a Saúde de São José de acordo com as redes de Atenção a Saúde e as linhas de cuidado.",
+                  "indicador": "Número de protocolos implantados",
+                  "valor_base": "0",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "4",
+                  "meta_fisica_2026": "1",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Realizar levantamento de áreas prioritárias para o desenvolvimento de protocolos junto às áreas técnicas."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Instituir grupo de trabalho permanente para a elaboração e revisão dos protocolos assistenciais no âmbito da Secretaria Municipal de Saúde, com carga horária protegida e sob a coordenação do NEPS."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Realizar reuniões mensais de monitoramento dos protocolos em elaboração e revisão junto ao grupo de trabalho."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Capacitar a rede de atenção à saúde para o uso dos protocolos assistenciais produzidos no âmbito da SMS."
+                    },
+                    {
+                      "id": 5,
+                      "descricao": "Desenvolver e aplicar, junto ao grupo de trabalho, matriz avaliativa da implantação dos protocolos assistenciais, que permita monitorar e avaliar o uso dos protocolos publicados no âmbito da SMS."
+                    }
+                  ]
+                },
+                {
+                  "numero": "3.2",
+                  "descricao": "Promover 200 ações  de Educação Permanente em Saúde destinadas a trabalhadores do SUS, nos quatro anos.",
+                  "indicador": "Número de ações realizadas",
+                  "valor_base": "112",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "200",
+                  "meta_fisica_2026": "25",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Realizar, anualmente, levantamento das demandas prioritárias de Educação Permanente em Saúde junto às áreas técnicas."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Elaborar, anualmente, o Plano de Ação Municipal de Educação Permanente em Saúde."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Manter agenda semanal de matriciamento em Gestão no Trabalho e Educação na Saúde, com a finalidade de apoiar e desenvolver ações formativas descentralizadas, buscando a aprendizagem significativa."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Aplicar instrumento de avaliação nas atividades de EPS desenvolvidas, visando mensurar a efetividade e a qualidade das ações."
+                    }
+                  ]
+                },
+                {
+                  "numero": "3.3",
+                  "descricao": "Realizar chamamento do concurso público para recompor o quadro de servidores da SMS/SJ.",
+                  "indicador": "Chamamento concurso público realizado",
+                  "valor_base": "1",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "1",
+                  "meta_fisica_2026": "1",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Apoiar as áreas técnicas no estudo de métodos e modelos do dimensionamento da força de trabalho em Saúde, a fim de manter relação justa entre a carga de trabalho e o quantitativo de trabalhadores em cada setor, de forma que estes dados dêem subsídio para a definição de áreas prioritárias para a recomposição do quadro de servidores da SMS-SJ."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Instituir a trilha formativa da SMS-SJ, com o objetivo de instrumentalizar novos servidores para o desenvolvimento de suas funções e aprimoramento do trabalho em saúde. "
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Criar mecanismos de acompanhamento do percurso formativo dos novos servidores (questionários, grupos de feedback, registro de participação), de forma a buscar uma integração orgânica e humanizada."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Participar de reuniões de alinhamento com a Gerência de Gestão de Pessoas, contribuindo na construção de estratégias de capacitação dos novos servidores."
+                    }
+                  ]
+                },
+                {
+                  "numero": "3.4",
+                  "descricao": "Implantar o Programa de saúde do trabalhador para os servidores da SMS até 2029.",
+                  "indicador": "Programa saúde do trabalhador implantado na SMS",
+                  "valor_base": "0",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "1",
+                  "meta_fisica_2026": "0",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Criar grupo condutor do Programa de Saúde do Trabalhador do SUS em São José, com a participação das áreas técnicas e Programas de Residência atuantes no município."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Criar espaço voltado à saúde do trabalhador da SMS-SJ, com a oferta de atividades multiprofissionais, de caráter individual e coletivo, com destinação de carga horária dos profissionais envolvidos e atendimentos mediante agendamento."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Realizar coorte prospectiva com o objetivo de acompanhar os resultados da implantação do espaço de saúde do trabalhador da SMS-SJ."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Implantar o programa RENAST (Rede Nacional de Atenção Integral à Saúde do Trabalhador) no Município de São José para coleta de dados e fortalecimento das ações em Saúde do Trabalhador e da Trabalhadora."
+                    }
+                  ]
+                },
+                {
+                  "numero": "3.5",
+                  "descricao": "Manter as residências médicas e multiprofissionais.",
+                  "indicador": "Residências médicas e multiprofissionais mantidas",
+                  "valor_base": "2",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "2",
+                  "meta_fisica_2026": "2",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Construir, de forma coletiva, instrumento de avaliação das residências no âmbito do município, com o objetivo de avaliar o impacto da presença dos programas de residência em São José. "
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Aplicar o instrumento de avaliação anualmente, com feedback à gestão, área técnica onde o programa se desenvolve e programa de residência."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Desenvolver Proposta de Credenciamento de um Programa (PCP) de Residência Multiprofissional em Saúde do município de São José."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Submeter a PCP à Comissão Nacional de Residências."
+                    }
+                  ]
+                }    
+              ]
+            },
+            {
+              "id": "4",
+              "descricao": "Fomentar o desenvolvimento de Ciência, Tecnologia  e Inovação em Saúde.",
+              "metas": [
+                {
+                  "numero": "4.1",
+                  "descricao": "Fomentar parcerias com as Universidades para a realização de pesquisas de interesse da SMS.",
+                  "indicador": "Parcerias com universidades estabelecidas para pesquisa",
+                  "valor_base": "0",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "6",
+                  "meta_fisica_2026": "2",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Realizar, anualmente, levantamento de temas de pesquisa prioritários junto às áreas técnicas."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Manter banco de dados de pesquisas de interesse da SMS-SJ."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Divulgar, periodicamente, as pesquisas de interesse da SMS-SJ junto às instituições de ensino superior."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Realizar as articulações interinstitucionais necessárias para viabilizar a execução dos projetos de pesquisa de interesse da SMS-SJ."
+                    }
+                  ]
+                },
+                {
+                  "numero": "4.2",
+                  "descricao": "Fomentar a utilização de ferramentas que promovam a tecnologia e inovação em saúde.",
+                  "indicador": "Ferramentas de tecnologia e inovação em saúde utilizadas",
+                  "valor_base": "2",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "2",
+                  "meta_fisica_2026": "1",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Promover e divulgar ações formativas que estimulem o desenvolvimento e o uso de tecnologias em saúde."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Publicar, quadrimestralmente, a Revista Saúde Coletiva em Movimento, o boletim informativo da Secretaria de Saúde, apresentando as práticas inovadoras em saúde."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Realizar, anualmente, a Mostra de Boas Práticas e Inovação em Saúde no âmbito da SMS, premiando as experiências que se destacarem."
+                    }
+                  ]
+                }    
+              ]
+            },
+            {
+              "id": "5",
+              "descricao": "Fortalecer as ações de Controle Social.",
+              "metas": [
+                {
+                  "numero": "5.2",
+                  "descricao": "Assegurar a realização da conferência municipal de saúde.",
+                  "indicador": "Conferência municipal de saúde realizada",
+                  "valor_base": "1",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "1",
+                  "meta_fisica_2026": "0",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Participar das articulações intra e interinstitucionais necessárias para a realização da Conferência Municipal de Saúde."
+                    },
+                    {
+                      "id": 2,
+                      "descricao": "Participar, junto ao Conselho Municipal de Saúde, da organização da Conferência Municipal de Saúde."
+                    }
+                  ]
+                },
+                {
+                  "numero": "5.3",
+                  "descricao": "Manter a transparência da SMS acessível através do portal institucuional.",
+                  "indicador": "Transparência da SMS acessível através do portal institucuional.",
+                  "valor_base": "1",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "1",
+                  "meta_fisica_2026": "1",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Disponibilizar as informações da SMS em sites oficiais."
+                    }
+                  ]
+                }    
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Direção Geral",
+      "diretrizes": [
+        {
+          "id": "04",
+          "descricao": " Aprimorar o cuidado à saúde, fortalecendo a gestão estratégica do SUS, do trabalho e da educação em saúde, intensificando a incorporação da inovação e da saúde digital. Esta diretriz está vinculada ao ODS 3, PNS 2024-2027, PES 2024-2027 e às propostas aprovadas nos relatórios finais das Conferências Municipais de Saúde (11ª Conferência Municipal de Saúde de São José, 1ª Conferência Municipal de Saúde Mental de São José, 1ª Conferência Municipal de Gestão do Trabalho e da Educação na Saúde de São José e 1ª Conferência Municipal de Saúde do Trabalhador e da Trabalhadora de São José)",
+          "objetivos": [
+            {
+              "id": "2",
+              "descricao": "Qualificar a assistêmca do ponto de vista da estrutura.",
+              "metas": [
+                {
+                  "numero": "2.1",
+                  "descricao": "Ampliar de sete para 35 o número de unidades de saúde da secretaria municipal de saúde de São José com alvará de bombeiro válido.",
+                  "indicador": "Número de unidades de saúde da secretaria municipal de saúde de São José com alvará de bombeiro válido",
+                  "valor_base": "7",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "35",
+                  "meta_fisica_2026": "14",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Implementar uma planilha ou sistema eletrônico para registrar a situação de cada unidade (com alvará válido, em análise, pendente de adequação), as datas de vencimento de ambos os alvarás (expedido pelo bombeiro e pela VISA) e os apontamentos da VISA."
+                    }
+                  ]
+                },
+                {
+                  "numero": "2.2",
+                  "descricao": "Ampliar de 25 para 35 o número de unidades de saúde da secretaria municipal de saúde de São José com alvará sanitário válido.",
+                  "indicador": "Número de unidades de saúde da secretaria municipal de saúde de São José com alvará sanitário válido",
+                  "valor_base": "25",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "35",
+                  "meta_fisica_2026": "30",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Implementar uma planilha ou sistema eletrônico para registrar a situação de cada unidade (com alvará válido, em análise, pendente de adequação), as datas de vencimento de ambos os alvarás (expedido pelo bombeiro e pela VISA) e os apontamentos da VISA."
+                    }
+                  ]
+                }    
+              ]
+            },
+            {
+              "id": "5",
+              "descricao": "Fortalecer as ações de Controle Social.",
+              "metas": [
+                {
+                  "numero": "5.1",
+                  "descricao": "Manter a ouvidoria do SUS na SMS.",
+                  "indicador": "Ouvidoria do SUS na SMS mantida.",
+                  "valor_base": "1",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "1",
+                  "meta_fisica_2026": "1",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Disponibilizar recursos vinculados e próprios para a manutenção ordinária da ouvidoria do SUS na SMS, bem como, em situações de emergência em saúde pública de importância nacional/estadual/municipal."
+                    }
+                  ]
+                }    
+              ]
+            },
+            {
+              "id": "6",
+              "descricao": "Manter a unidade da SMS e CMS.",
+              "metas": [
+                {
+                  "numero": "6.1",
+                  "descricao": "Manter a unidade administrativa da SMS.",
+                  "indicador": "Unidade administrativa da SMS mantida.",
+                  "valor_base": "1",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "1",
+                  "meta_fisica_2026": "1",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Disponibilizar recursos vinculados e próprios para a manutenção ordinária da unidade administrativa da SMS, bem como, em situações de emergência em saúde pública de importância nacional/estadual/municipal."
+                    }
+                  ]
+                },
+                {
+                  "numero": "6.2",
+                  "descricao": "Manter o CMS.",
+                  "indicador": "CMS mantido",
+                  "valor_base": "1",
+                  "ano_base": 2024,
+                  "unidade_medida": "Número",
+                  "meta_plano_2026_2029": "1",
+                  "meta_fisica_2026": "1",
+                  "acoes": [
+                    {
+                      "id": 1,
+                      "descricao": "Disponibilizar recursos vinculados e próprios para a manutenção ordinária do CMS, bem como, em situações de emergência em saúde pública de importância nacional/estadual/municipal."
+                    }
+                  ]
+                }    
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
