@@ -1,6 +1,6 @@
 'use client'
 
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -34,70 +34,61 @@ export function MetaCard({ meta }: { meta: any }) {
 
   return (
     <Card 
-        className="flex flex-col w-full shadow-sm hover:shadow-md transition-shadow border-t-4 border-t-primary/20"
-        style={{ height: 'auto', minHeight: 0 }} // Force auto height
+        className="flex flex-col w-full h-auto min-h-0 shadow-sm hover:shadow-md transition-shadow border-t-4 border-t-primary/20"
     >
-      <CardHeader className="pb-2">
-        <div className="flex flex-col gap-2">
-            <div className="flex justify-between items-start gap-2">
-                 <span className="text-xs font-mono text-muted-foreground bg-slate-100 px-2 py-1 rounded w-fit shrink-0">
-                    Meta {meta.numero}
-                </span>
-                <Badge className={clsx("text-white shrink-0 gap-1 pl-1 pr-2", statusConfig.color)}>
-                    <StatusIcon className="w-3 h-3" />
-                    {status}
-                </Badge>
-            </div>
-            {/* Title flows naturally with break-words */}
-            <CardTitle 
-                className="text-lg font-bold leading-relaxed mt-1 whitespace-normal break-words"
-                style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}
-            >
-                {meta.descricao}
-            </CardTitle>
+      <CardHeader className="pb-2 shrink-0 h-auto bg-slate-50/50 rounded-t-xl border-b border-slate-100">
+        <div className="flex justify-between items-center gap-2">
+             <span className="text-xs font-mono font-bold text-primary bg-primary/10 px-2 py-1 rounded w-fit shrink-0">
+                Meta {meta.numero}
+            </span>
+            <Badge className={clsx("text-white shrink-0 gap-1 pl-1 pr-2", statusConfig.color)}>
+                <StatusIcon className="w-3 h-3" />
+                {status}
+            </Badge>
         </div>
       </CardHeader>
       
-      <CardContent className="flex flex-col gap-4">
-        {/* Indicator Section - Explicit Block with Fluid Height */}
-        <div 
-            className="flex flex-col space-y-1 bg-slate-50 p-3 rounded-md border border-slate-100"
-            style={{ height: 'auto' }}
-        >
-             <span className="text-xs font-semibold text-muted-foreground uppercase">Indicador</span>
-             <p 
-                className="text-sm font-medium leading-relaxed whitespace-normal break-words"
-                style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}
-             >
+      <CardContent className="flex flex-col gap-4 pt-5">
+        
+        {/* 1. DESCRIÇÃO DA META */}
+        <div className="w-full h-auto whitespace-normal break-words">
+             <h3 className="text-lg font-bold leading-normal text-slate-900">
+                {meta.descricao}
+             </h3>
+        </div>
+
+        {/* 2. INDICADOR */}
+        <div className="w-full h-auto whitespace-normal break-words flex flex-col space-y-1.5 bg-slate-50 p-3 rounded-lg border border-slate-100">
+             <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                Indicador
+             </span>
+             <p className="text-sm font-medium leading-relaxed text-slate-700">
                 {meta.indicadorNome}
              </p>
         </div>
 
-        {/* Progress Section */}
-        <div className="space-y-2">
+        {/* 3. PROGRESSO */}
+        <div className="space-y-2 w-full">
             <div className="flex justify-between text-sm font-medium">
                 <span className="text-muted-foreground">Progresso ({meta.unidadeMedida})</span>
-                <span>{realizado} / {meta.metaFisica2026}</span>
+                <span className="font-mono">{realizado} / {meta.metaFisica2026}</span>
             </div>
             <Progress value={percent} className={clsx("h-2.5", statusConfig.color)} />
         </div>
 
-        {/* Actions Section */}
+        {/* 4. PLANO DE AÇÃO */}
         {meta.acoes && meta.acoes.length > 0 && (
-            <div className="space-y-3 pt-2">
+            <div className="space-y-3 pt-2 w-full h-auto whitespace-normal break-words">
                 <div className="flex items-center gap-2">
                     <Separator className="flex-1" />
-                    <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Plano de Ação</span>
+                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Plano de Ação</span>
                     <Separator className="flex-1" />
                 </div>
-                <ul className="space-y-2">
+                <ul className="space-y-3">
                     {meta.acoes.map((acao: any) => (
-                        <li key={acao.id} className="text-sm text-slate-600 flex items-start gap-2">
-                            <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-300 shrink-0" />
-                            <span 
-                                className="leading-snug whitespace-normal break-words"
-                                style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}
-                            >
+                        <li key={acao.id} className="text-sm text-slate-600 flex items-start gap-3">
+                            <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 shrink-0" />
+                            <span className="leading-snug">
                                 {acao.descricao}
                             </span>
                         </li>
@@ -106,21 +97,19 @@ export function MetaCard({ meta }: { meta: any }) {
             </div>
         )}
         
+        {/* 5. JUSTIFICATIVA */}
         {latest?.justificativa && (
-             <div 
-                className="bg-amber-50 border border-amber-200 p-3 rounded-md text-sm text-amber-800 italic"
-                style={{ height: 'auto' }}
-             >
-                <span className="font-semibold not-italic block text-xs mb-1">Justificativa ({latest.quadrimestre}º Quad):</span>
-                <p 
-                    className="whitespace-normal break-words leading-relaxed"
-                    style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}
-                >
+             <div className="w-full h-auto whitespace-normal break-words bg-amber-50 border border-amber-200 p-4 rounded-lg text-sm text-amber-900 mt-auto">
+                <span className="font-bold block text-xs mb-2 text-amber-700 uppercase">
+                    Justificativa ({latest.quadrimestre}º Quad):
+                </span>
+                <p className="leading-relaxed italic">
                     "{latest.justificativa}"
                 </p>
              </div>
         )}
       </CardContent>
+
       <CardFooter className="pt-2 mt-auto">
         <UpdateMetaSheet meta={meta}>
             <Button className="w-full font-semibold" size="lg">

@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ChevronRight, ArrowLeft, Target, ListChecks } from "lucide-react"
-import { MetaTable } from "./meta-table"
+import { MetaCard } from "./meta-card"
 
 // Types matching the Prisma include structure
 type DataProps = {
@@ -15,7 +15,7 @@ type DataProps = {
     id: string
     titulo: string
     descricao: string
-    metas: any[] // We pass this down to MetaTable
+    metas: any[] // We pass this down to MetaCard
   }[]
 }[]
 
@@ -106,7 +106,7 @@ export function HierarchicalView({ data }: { data: DataProps }) {
     )
   }
 
-  // Level 3: Metas Table
+  // Level 3: Metas Grid (Vertical Flow)
   return (
     <div className="space-y-6">
        <div className="flex items-center space-x-4">
@@ -119,7 +119,17 @@ export function HierarchicalView({ data }: { data: DataProps }) {
           </div>
         </div>
 
-        <MetaTable metas={selectedObjetivo.metas} />
+        {selectedObjetivo.metas.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 auto-rows-min align-top">
+                {selectedObjetivo.metas.map((meta) => (
+                    <MetaCard key={meta.id} meta={meta} />
+                ))}
+            </div>
+        ) : (
+            <div className="p-8 text-center text-muted-foreground border border-dashed rounded-lg bg-slate-50">
+                Nenhuma meta cadastrada neste objetivo para seu departamento.
+            </div>
+        )}
     </div>
   )
 }
