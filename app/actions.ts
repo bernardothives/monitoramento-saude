@@ -221,9 +221,11 @@ export async function updateMonitoramento(prevState: any, formData: FormData) {
                 else performance = 0.5; 
             }
         } else { // target is 0 or negative, handle appropriately
-            if (valorRealizado === target) performance = 1.1; // Met the zero target
-            else if (valorRealizado > 0 && meta.tipoMeta === 'REDUZIR') performance = 0.5; // Failed to reduce to zero
-            else performance = 0; // Default case
+            if (valorRealizado === target) {
+                performance = 1.1; // Met the zero target
+            } else {
+                performance = 0.5; // Failed to meet the zero target
+            }
         }
         
         if (performance >= 1) statusRAG = "VERDE";
