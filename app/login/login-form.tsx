@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useActionState } from 'react'
+import { useActionState } from 'react'
 import { login } from '@/app/actions'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
@@ -9,7 +9,6 @@ import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 export function LoginForm({ departments }: { departments: { id: string, nome: string }[] }) {
-  const [selectedDept, setSelectedDept] = useState("")
   const [state, formAction] = useActionState(login, null)
 
   return (
@@ -24,8 +23,7 @@ export function LoginForm({ departments }: { departments: { id: string, nome: st
             <div className="grid w-full items-center gap-4">
               <div className="flex flex-col space-y-1.5">
                 <Label htmlFor="dept">Departamento</Label>
-                {/* Added w-full to SelectTrigger to match Input width */}
-                <Select name="deptId" onValueChange={setSelectedDept} required>
+                <Select name="deptId" required>
                   <SelectTrigger id="dept" className="w-full">
                     <SelectValue placeholder="Selecione..." />
                   </SelectTrigger>
@@ -37,8 +35,6 @@ export function LoginForm({ departments }: { departments: { id: string, nome: st
                     ))}
                   </SelectContent>
                 </Select>
-                {/* Fallback hidden input for form submission */}
-                 <input type="hidden" name="deptId" value={selectedDept} />
               </div>
               <div className="flex flex-col space-y-1.5">
                 <Label htmlFor="password">Senha</Label>

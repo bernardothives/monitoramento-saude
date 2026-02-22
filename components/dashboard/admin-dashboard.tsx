@@ -30,8 +30,8 @@ export function AdminDashboard({ stats, departments, currentDeptId, departmentDa
                     <p className="text-muted-foreground">Visão Administrativa</p>
                  </div>
                  <div className="flex items-center gap-2">
-                     <span className="text-sm font-medium">Visualizar Departamento:</span>
-                     <AdminFilter departments={departments} currentDeptId={currentDeptId} />
+                     <label htmlFor="dept-filter" className="text-sm font-medium">Visualizar Departamento:</label>
+                     <AdminFilter id="dept-filter" departments={departments} currentDeptId={currentDeptId} />
                  </div>
               </div>
               
@@ -49,8 +49,8 @@ export function AdminDashboard({ stats, departments, currentDeptId, departmentDa
             <p className="text-muted-foreground">Monitoramento consolidado do PAS 2026</p>
          </div>
          <div className="flex items-center gap-2 bg-muted/30 p-2 rounded-lg border">
-             <span className="text-sm font-medium">Auditar Departamento:</span>
-             <AdminFilter departments={departments} currentDeptId={currentDeptId} />
+             <label htmlFor="dept-filter" className="text-sm font-medium">Auditar Departamento:</label>
+             <AdminFilter id="dept-filter" departments={departments} currentDeptId={currentDeptId} />
          </div>
       </div>
 

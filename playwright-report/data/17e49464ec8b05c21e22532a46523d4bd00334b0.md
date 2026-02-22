@@ -1,0 +1,54 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e7] [cursor=pointer]:
+    - img [ref=e8]
+  - alert [ref=e11]
+  - generic [ref=e13]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - heading "PAS 2026" [level=2] [ref=e18]
+        - paragraph [ref=e19]: Planejamento
+      - list [ref=e21]:
+        - listitem [ref=e22]:
+          - link "Visão Geral" [ref=e23] [cursor=pointer]:
+            - /url: /admin/dashboard
+            - img [ref=e24]
+            - generic [ref=e27]: Visão Geral
+      - button "Sair" [ref=e31]
+    - main [ref=e32]:
+      - generic [ref=e33]:
+        - button "Toggle Sidebar" [ref=e34]:
+          - img
+          - generic [ref=e35]: Toggle Sidebar
+        - heading "Monitoramento de Metas" [level=1] [ref=e37]
+      - generic [ref=e40]:
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - heading "Painel de Gestão" [level=2] [ref=e43]
+            - paragraph [ref=e44]: Visão Administrativa
+          - generic [ref=e45]:
+            - generic [ref=e46]: "Visualizar Departamento:"
+            - combobox "Visualizar Departamento:" [active] [ref=e47]:
+              - generic: Atenção Especializada
+              - img
+        - generic [ref=e48]:
+          - heading "Monitoramento de Metas" [level=2] [ref=e50]
+          - generic [ref=e51]:
+            - generic [ref=e52] [cursor=pointer]:
+              - generic [ref=e53]:
+                - generic [ref=e54]: DIRETRIZ 01
+                - generic [ref=e55]: Fortalecer a atenção primária, ampliando a cobertura de Atenção Primária a Saúde (APS), com vistas à universalização do acesso, à promoção da saúde, à prevenção de doenças e agravos e à redução das desigualdades de acesso, sociais, de raça/etnia e gênero. Esta diretriz está vinculada ao ODS 3, PNS 2024-2027, PES 2024-2027 e às propostas aprovadas nos relatórios finais das Conferências Municipais de Saúde (11ª Conferência Municipal de Saúde de São José, 1ª Conferência Municipal de Saúde Mental de São José, 1ª Conferência Municipal de Gestão do Trabalho e da Educação na Saúde de São José e 1ª Conferência Municipal de Saúde do Trabalhador e da Trabalhadora de São José).
+              - generic [ref=e57]:
+                - img [ref=e58]
+                - text: 1 Objetivos
+            - generic [ref=e62] [cursor=pointer]:
+              - generic [ref=e63]:
+                - generic [ref=e64]: DIRETRIZ 02
+                - generic [ref=e65]: Ampliar a oferta e o acesso às ações e serviços da Atenção Especializada, conforme as necessidades de saúde da população, reduzindo as desigualdades de acesso, sociais, de raça/etnia e gênero. Esta diretriz está vinculada ao ODS 3, PNS 2024-2027, PES 2024-2027 e às propostas aprovadas nos relatórios finais das Conferências Municipais de Saúde (11ª Conferência Municipal de Saúde de São José, 1ª Conferência Municipal de Saúde Mental de São José, 1ª Conferência Municipal de Gestão do Trabalho e da Educação na Saúde de São José e 1ª Conferência Municipal de Saúde do Trabalhador e da Trabalhadora de São José).
+              - generic [ref=e67]:
+                - img [ref=e68]
+                - text: 2 Objetivos
+  - generic [ref=e72]: Atenção Primária
+```

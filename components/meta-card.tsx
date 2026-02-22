@@ -51,7 +51,7 @@ export function MetaCard({ meta }: { meta: any }) {
       <CardContent className="flex flex-col gap-4 pt-5">
         
         {/* 1. DESCRIÇÃO DA META */}
-        <div className="w-full h-auto whitespace-normal break-words">
+        <div className="w-full h-auto whitespace-normal break-words min-w-0">
              <h3 className="text-lg font-bold leading-normal text-slate-900">
                 {meta.descricao}
              </h3>

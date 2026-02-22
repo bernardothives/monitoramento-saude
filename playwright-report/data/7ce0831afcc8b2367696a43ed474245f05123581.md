@@ -1,0 +1,47 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e7] [cursor=pointer]:
+    - img [ref=e8]
+  - alert [ref=e11]
+  - generic [ref=e13]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - heading "PAS 2026" [level=2] [ref=e18]
+        - paragraph [ref=e19]: Atenção Primária
+      - list [ref=e21]:
+        - listitem [ref=e22]:
+          - link "Minhas Metas" [ref=e23] [cursor=pointer]:
+            - /url: /dashboard
+            - img [ref=e24]
+            - generic [ref=e26]: Minhas Metas
+      - button "Sair" [ref=e30]
+    - main [ref=e31]:
+      - generic [ref=e32]:
+        - button "Toggle Sidebar" [ref=e33]:
+          - img
+          - generic [ref=e34]: Toggle Sidebar
+        - heading "Monitoramento de Metas" [level=1] [ref=e36]
+      - generic [ref=e38]:
+        - generic [ref=e40]:
+          - heading "Painel Departamental" [level=2] [ref=e41]
+          - paragraph [ref=e42]: Monitoramento de Metas - Atenção Primária
+        - generic [ref=e43]:
+          - heading "Monitoramento de Metas" [level=2] [ref=e45]
+          - generic [ref=e46]:
+            - generic [ref=e47] [cursor=pointer]:
+              - generic [ref=e48]:
+                - generic [ref=e49]: DIRETRIZ 01
+                - generic [ref=e50]: Fortalecer a atenção primária, ampliando a cobertura de Atenção Primária a Saúde (APS), com vistas à universalização do acesso, à promoção da saúde, à prevenção de doenças e agravos e à redução das desigualdades de acesso, sociais, de raça/etnia e gênero. Esta diretriz está vinculada ao ODS 3, PNS 2024-2027, PES 2024-2027 e às propostas aprovadas nos relatórios finais das Conferências Municipais de Saúde (11ª Conferência Municipal de Saúde de São José, 1ª Conferência Municipal de Saúde Mental de São José, 1ª Conferência Municipal de Gestão do Trabalho e da Educação na Saúde de São José e 1ª Conferência Municipal de Saúde do Trabalhador e da Trabalhadora de São José).
+              - generic [ref=e52]:
+                - img [ref=e53]
+                - text: 3 Objetivos
+            - generic [ref=e57] [cursor=pointer]:
+              - generic [ref=e58]:
+                - generic [ref=e59]: DIRETRIZ 03
+                - generic [ref=e60]: Reduzir e controlar doenças e agravos passíveis de prevenção e controle, com enfoque na superação das desigualdades de acesso, sociais, de raça/etnia e gênero. Esta diretriz está vinculada ao ODS 3, PNS 2024-2027, PES 2024-2027 e às propostas aprovadas nos relatórios finais das Conferências Municipais de Saúde (11ª Conferência Municipal de Saúde de São José, 1ª Conferência Municipal de Saúde Mental de São José, 1ª Conferência Municipal de Gestão do Trabalho e da Educação na Saúde de São José e 1ª Conferência Municipal de Saúde do Trabalhador e da Trabalhadora de São José).
+              - generic [ref=e62]:
+                - img [ref=e63]
+                - text: 1 Objetivos
+```

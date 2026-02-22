@@ -10,11 +10,12 @@ import {
 import { useRouter, useSearchParams } from "next/navigation"
 
 interface AdminFilterProps {
+  id?: string;
   departments: { id: string; nome: string }[]
   currentDeptId?: string
 }
 
-export function AdminFilter({ departments, currentDeptId }: AdminFilterProps) {
+export function AdminFilter({ id, departments, currentDeptId }: AdminFilterProps) {
   const router = useRouter()
   
   const handleChange = (value: string) => {
@@ -23,7 +24,7 @@ export function AdminFilter({ departments, currentDeptId }: AdminFilterProps) {
 
   return (
     <Select value={currentDeptId} onValueChange={handleChange}>
-      <SelectTrigger className="w-[280px]">
+      <SelectTrigger id={id} className="w-[280px]">
         <SelectValue placeholder="Selecione um departamento" />
       </SelectTrigger>
       <SelectContent>

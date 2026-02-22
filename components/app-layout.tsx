@@ -43,6 +43,29 @@ export function AppLayout({ children, isAdmin, deptName }: { children: React.Rea
                 </SidebarMenuItem>
               )}
             </SidebarMenu>
+            {/* INÍCIO DO NOVO BLOCO DE CÓDIGO */}
+            <SidebarMenu className="p-2 mt-4">
+              <span className="px-3 text-xs font-semibold uppercase text-muted-foreground">
+                Documentos
+              </span>
+              <SidebarMenuItem className="mt-2">
+                <SidebarMenuButton asChild>
+                  <a href="/docs/plano-municipal-saude.pdf" target="_blank" rel="noopener noreferrer">
+                    <Building2 className="w-4 h-4 mr-2" /> 
+                    <span>Plano Municipal de Saúde</span>
+                  </a>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <a href="https://docs.google.com/spreadsheets/d/1hlRDBQZ5mFgecDSAvATU-Xj51Lbrzact/edit?usp=sharing&ouid=109054687835744643412&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">
+                    <PieChart className="w-4 h-4 mr-2" />
+                    <span>Planilha Base (PAS)</span>
+                  </a>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            </SidebarMenu>
+            {/* FIM DO NOVO BLOCO DE CÓDIGO */}
           </SidebarContent>
           <SidebarFooter className="p-4 border-t">
              <div className="flex items-center gap-2">

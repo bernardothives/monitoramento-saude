@@ -1,0 +1,76 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e7] [cursor=pointer]:
+    - img [ref=e8]
+  - alert [ref=e11]
+  - generic [ref=e13]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - heading "PAS 2026" [level=2] [ref=e18]
+        - paragraph [ref=e19]: Planejamento
+      - list [ref=e21]:
+        - listitem [ref=e22]:
+          - link "Visão Geral" [ref=e23] [cursor=pointer]:
+            - /url: /admin/dashboard
+            - img [ref=e24]
+            - generic [ref=e27]: Visão Geral
+      - button "Sair" [ref=e31]
+    - main [ref=e32]:
+      - generic [ref=e33]:
+        - button "Toggle Sidebar" [ref=e34]:
+          - img
+          - generic [ref=e35]: Toggle Sidebar
+        - heading "Monitoramento de Metas" [level=1] [ref=e37]
+      - generic [ref=e40]:
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - heading "Visão Geral da Prefeitura" [level=2] [ref=e43]
+            - paragraph [ref=e44]: Monitoramento consolidado do PAS 2026
+          - generic [ref=e45]:
+            - generic [ref=e46]: "Auditar Departamento:"
+            - combobox "Auditar Departamento:" [ref=e47]:
+              - generic: Selecione um departamento
+              - img
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - generic [ref=e50]:
+              - generic [ref=e51]: Total de Metas
+              - img [ref=e52]
+            - generic [ref=e56]:
+              - generic [ref=e57]: "80"
+              - paragraph [ref=e58]: Metas cadastradas em todos os setores
+          - generic [ref=e59]:
+            - generic [ref=e60]:
+              - generic [ref=e61]: Metas Concluídas (No Prazo)
+              - img [ref=e62]
+            - generic [ref=e65]:
+              - generic [ref=e66]: "0"
+              - paragraph [ref=e67]: Status "VERDE" no período atual
+          - generic [ref=e68]:
+            - generic [ref=e69]:
+              - generic [ref=e70]: Índice de Eficácia Global
+              - img [ref=e71]
+            - generic [ref=e76]:
+              - generic [ref=e77]: 0.0%
+              - paragraph [ref=e78]: Média ponderada de realização
+        - generic [ref=e79]:
+          - generic [ref=e81]: Desempenho por Departamento (% Metas no Prazo)
+          - generic [ref=e85]:
+            - generic:
+              - status:
+                - paragraph: Atenção Primária
+                - list:
+                  - listitem: "% Concluído : 0"
+            - application [ref=e86]:
+              - generic [ref=e93]:
+                - generic [ref=e95]: Atenção Primária
+                - generic [ref=e97]: AtençãoEspecializada
+                - generic [ref=e99]: Regulação
+                - generic [ref=e101]: VigilânciaEpidemiológica
+                - generic [ref=e103]: Vigilância Sanitária
+                - generic [ref=e105]: EducaçãoPermanente doSUS
+                - generic [ref=e107]: Direção Geral
+  - generic [ref=e108]: Atenção Primária
+```

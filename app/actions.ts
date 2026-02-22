@@ -5,6 +5,13 @@ import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { revalidatePath } from 'next/cache';
 
+// +++ Helper de Segurança: Sanitização de Input +++
+function sanitize(input: string | null | undefined): string {
+  if (!input) return "";
+  // Remove todas as tags HTML para prevenir XSS.
+  return input.replace(/<[^>]*>?/gm, '');
+}
+
 // ... (Existing login/logout logic remains) ...
 export async function login(prevState: any, formData: FormData) {
   const deptId = formData.get('deptId') as string;
@@ -170,13 +177,25 @@ export async function updateMonitoramento(prevState: any, formData: FormData) {
   const metaId = formData.get('metaId') as string;
   const quadrimestre = parseInt(formData.get('quadrimestre') as string);
   const valorRealizadoStr = formData.get('valorRealizado') as string;
-  const justificativa = formData.get('justificativa') as string;
+  const justificativa = sanitize(formData.get('justificativa') as string);
 
-  if (!metaId) return { error: "Meta ID missing" };
+  if (!metaId) return { error: "Meta ID ausente." };
 
   try {
+    // IDOR PROTECTION: Check user permissions
+    const cookieStore = await cookies();
+    const deptId = cookieStore.get('dept_id')?.value;
+    const isAdmin = cookieStore.get('is_admin')?.value === 'true';
+
+    if (!deptId) return { error: "Usuário não autenticado." };
+
     const meta = await db.meta.findUnique({ where: { id: metaId } });
-    if (!meta) return { error: "Meta not found" };
+    if (!meta) return { error: "Meta não encontrada." };
+
+    // Enforce ownership unless admin
+    if (!isAdmin && meta.departamentoId !== deptId) {
+      return { error: "Acesso não autorizado para editar esta meta." };
+    }
 
     const valorRealizado = parseFloat(valorRealizadoStr);
     
@@ -189,15 +208,22 @@ export async function updateMonitoramento(prevState: any, formData: FormData) {
         
         let performance = 0; 
         
-        if (target > base) {
-            performance = valorRealizado / target;
-        } else if (target < base) {
-             if (valorRealizado <= target) performance = 1.1; 
-             else if (valorRealizado < base) performance = 0.8; 
-             else performance = 0.5; 
-        } else {
-            if (valorRealizado === target) performance = 1;
-            else performance = 0.5; 
+        // Zero-division check
+        if (target > 0) {
+            if (target > base) {
+                performance = valorRealizado / target;
+            } else if (target < base) {
+                 if (valorRealizado <= target) performance = 1.1; // Exceeded goal
+                 else if (valorRealizado < base) performance = 0.8; // Better than baseline
+                 else performance = 0.5; // Worse than baseline
+            } else { // target === base
+                if (valorRealizado === target) performance = 1;
+                else performance = 0.5; 
+            }
+        } else { // target is 0 or negative, handle appropriately
+            if (valorRealizado === target) performance = 1.1; // Met the zero target
+            else if (valorRealizado > 0 && meta.tipoMeta === 'REDUZIR') performance = 0.5; // Failed to reduce to zero
+            else performance = 0; // Default case
         }
         
         if (performance >= 1) statusRAG = "VERDE";
@@ -229,9 +255,9 @@ export async function updateMonitoramento(prevState: any, formData: FormData) {
     });
 
     revalidatePath('/dashboard');
-    return { success: true };
+    return { success: true, message: "Monitoramento salvo com sucesso!" };
   } catch (e) {
     console.error(e);
-    return { error: "Erro ao salvar." };
+    return { error: "Erro interno ao salvar." };
   }
 }
