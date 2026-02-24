@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useTransition } from "react"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
 import { Badge } from "@/components/ui/badge"
@@ -8,6 +9,59 @@ import { UpdateMetaSheet } from "./update-meta-sheet"
 import { clsx } from "clsx"
 import { Separator } from "@/components/ui/separator"
 import { CheckCircle2, AlertCircle, Clock } from "lucide-react"
+import { toggleAcaoExecution } from "@/app/actions"
+
+function AcaoItem({ acao }: { acao: any }) {
+    const [isPending, startTransition] = useTransition();
+    const [emExecucao, setEmExecucao] = useState(acao.emExecucao || false);
+
+    const handleToggle = () => {
+        const newState = !emExecucao;
+        setEmExecucao(newState);
+        startTransition(async () => {
+            const result = await toggleAcaoExecution(acao.id, newState);
+            if (result?.error) {
+                // Revert on error
+                setEmExecucao(!newState);
+                alert(result.error);
+            }
+        });
+    };
+
+    return (
+        <li className="text-sm text-slate-600 flex items-center justify-between gap-3 p-2 rounded-md hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100">
+            <div className="flex items-start gap-3">
+                <span className={clsx("mt-1.5 w-2 h-2 rounded-full shrink-0", emExecucao ? "bg-green-500" : "bg-slate-300")} />
+                <span className="leading-snug">
+                    {acao.descricao}
+                </span>
+            </div>
+            <div className="flex items-center gap-2 shrink-0">
+                <span className={clsx("text-xs font-medium", emExecucao ? "text-green-600" : "text-slate-400")}>
+                    {emExecucao ? "Realizando" : "Pendente"}
+                </span>
+                <button
+                    type="button"
+                    role="switch"
+                    aria-checked={emExecucao}
+                    onClick={handleToggle}
+                    disabled={isPending}
+                    className={clsx(
+                        "relative inline-flex h-5 w-9 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+                        emExecucao ? "bg-green-500" : "bg-slate-200"
+                    )}
+                >
+                    <span
+                        className={clsx(
+                            "pointer-events-none block h-4 w-4 rounded-full bg-white shadow-sm ring-0 transition-transform",
+                            emExecucao ? "translate-x-4" : "translate-x-0"
+                        )}
+                    />
+                </button>
+            </div>
+        </li>
+    );
+}
 
 export function MetaCard({ meta }: { meta: any }) {
   // Find latest monitoramento
@@ -84,14 +138,9 @@ export function MetaCard({ meta }: { meta: any }) {
                     <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Plano de Ação</span>
                     <Separator className="flex-1" />
                 </div>
-                <ul className="space-y-3">
+                <ul className="space-y-2">
                     {meta.acoes.map((acao: any) => (
-                        <li key={acao.id} className="text-sm text-slate-600 flex items-start gap-3">
-                            <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 shrink-0" />
-                            <span className="leading-snug">
-                                {acao.descricao}
-                            </span>
-                        </li>
+                        <AcaoItem key={acao.id} acao={acao} />
                     ))}
                 </ul>
             </div>

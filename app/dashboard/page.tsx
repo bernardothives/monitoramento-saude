@@ -1,4 +1,4 @@
-import { getCurrentUser, getDepartments, getHierarchicalData, getGlobalStats } from "@/app/actions";
+import { getCurrentUser, getDepartments, getHierarchicalData, getGlobalStats, getAcoesStatsByDepartment } from "@/app/actions";
 import { AdminDashboard } from "@/components/dashboard/admin-dashboard";
 import { DepartmentDashboard } from "@/components/dashboard/department-dashboard";
 import { redirect } from "next/navigation";
@@ -18,6 +18,7 @@ export default async function DashboardPage({
   if (user.isAdmin) {
       const departments = await getDepartments();
       const globalStats = await getGlobalStats();
+      const acoesStats = await getAcoesStatsByDepartment();
 
       // If filtering by department, fetch that specific data
       let departmentData = null;
@@ -30,6 +31,7 @@ export default async function DashboardPage({
           <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
              <AdminDashboard 
                 stats={globalStats}
+                acoesStats={acoesStats}
                 departments={departments}
                 currentDeptId={targetDeptId}
                 departmentData={departmentData}

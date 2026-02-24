@@ -57,6 +57,7 @@ model Meta {
 model Acao {
   id             String       @id @default(cuid())
   descricao      String       // Passo a passo da ação
+  emExecucao     Boolean      @default(false) // Track execution status
   metaId         String
   meta           Meta         @relation(fields: [metaId], references: [id])
   departamentoId String

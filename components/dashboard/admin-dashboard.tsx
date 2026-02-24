@@ -1,7 +1,7 @@
 "use client"
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts'
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, Legend } from 'recharts'
 import { AdminFilter } from "@/app/dashboard/admin-filter"
 import { DepartmentDashboard } from "./department-dashboard"
 import { Users, Target, CheckCircle2 } from "lucide-react"
@@ -13,12 +13,13 @@ interface AdminDashboardProps {
     percentGlobal: number
     chartData: any[]
   }
+  acoesStats?: any[]
   departments: { id: string; nome: string }[]
   currentDeptId?: string
   departmentData?: any // Present only if filtered
 }
 
-export function AdminDashboard({ stats, departments, currentDeptId, departmentData }: AdminDashboardProps) {
+export function AdminDashboard({ stats, acoesStats, departments, currentDeptId, departmentData }: AdminDashboardProps) {
   
   // If a department is selected, we show the filter AND the Dept Dashboard
   if (currentDeptId && departmentData) {
@@ -89,31 +90,58 @@ export function AdminDashboard({ stats, departments, currentDeptId, departmentDa
       </div>
 
       {/* Charts */}
-      <Card className="col-span-4">
-        <CardHeader>
-          <CardTitle>Desempenho por Departamento (% Metas no Prazo)</CardTitle>
-        </CardHeader>
-        <CardContent className="pl-2">
-          {/* Explicit style to prevent Recharts measurement errors */}
-          <div style={{ width: '100%', height: 350 }}>
-            <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
-              <BarChart data={stats.chartData} layout="vertical" margin={{ left: 20, right: 20 }}>
-                <XAxis type="number" hide />
-                <YAxis dataKey="name" type="category" width={150} tick={{fontSize: 12}} />
-                <Tooltip 
-                    cursor={{fill: 'transparent'}}
-                    contentStyle={{ borderRadius: '8px' }} 
-                />
-                <Bar dataKey="pct" name="% Concluído" radius={[0, 4, 4, 0]}>
-                    {stats.chartData.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={entry.pct >= 70 ? '#22c55e' : entry.pct >= 50 ? '#eab308' : '#ef4444'} />
-                    ))}
-                </Bar>
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
-        </CardContent>
-      </Card>
+      <div className="grid gap-4 md:grid-cols-2">
+        <Card>
+          <CardHeader>
+            <CardTitle>Desempenho por Departamento (% Metas no Prazo)</CardTitle>
+          </CardHeader>
+          <CardContent className="pl-2">
+            {/* Explicit style to prevent Recharts measurement errors */}
+            <div style={{ width: '100%', height: 350 }}>
+              <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
+                <BarChart data={stats.chartData} layout="vertical" margin={{ left: 20, right: 20 }}>
+                  <XAxis type="number" hide />
+                  <YAxis dataKey="name" type="category" width={150} tick={{fontSize: 12}} />
+                  <Tooltip 
+                      cursor={{fill: 'transparent'}}
+                      contentStyle={{ borderRadius: '8px' }} 
+                  />
+                  <Bar dataKey="pct" name="% Concluído" radius={[0, 4, 4, 0]}>
+                      {stats.chartData.map((entry, index) => (
+                          <Cell key={`cell-${index}`} fill={entry.pct >= 70 ? '#22c55e' : entry.pct >= 50 ? '#eab308' : '#ef4444'} />
+                      ))}
+                  </Bar>
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+          </CardContent>
+        </Card>
+
+        {acoesStats && (
+          <Card>
+            <CardHeader>
+              <CardTitle>Monitoramento de Ações por Departamento</CardTitle>
+            </CardHeader>
+            <CardContent className="pl-2">
+              <div style={{ width: '100%', height: 350 }}>
+                <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
+                  <BarChart data={acoesStats} layout="vertical" margin={{ left: 20, right: 20 }}>
+                    <XAxis type="number" hide />
+                    <YAxis dataKey="name" type="category" width={150} tick={{fontSize: 12}} />
+                    <Tooltip 
+                        cursor={{fill: 'transparent'}}
+                        contentStyle={{ borderRadius: '8px' }} 
+                    />
+                    <Legend />
+                    <Bar dataKey="emExecucao" name="Realizando" stackId="a" fill="#22c55e" />
+                    <Bar dataKey="naoIniciadas" name="Pendente" stackId="a" fill="#94a3b8" radius={[0, 4, 4, 0]} />
+                  </BarChart>
+                </ResponsiveContainer>
+              </div>
+            </CardContent>
+          </Card>
+        )}
+      </div>
     </div>
   )
 }

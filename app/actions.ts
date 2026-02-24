@@ -263,3 +263,62 @@ export async function updateMonitoramento(prevState: any, formData: FormData) {
     return { error: "Erro interno ao salvar." };
   }
 }
+
+export async function toggleAcaoExecution(acaoId: string, emExecucao: boolean) {
+  try {
+    const cookieStore = await cookies();
+    const deptId = cookieStore.get('dept_id')?.value;
+    const isAdmin = cookieStore.get('is_admin')?.value === 'true';
+
+    if (!deptId) return { error: "Usuário não autenticado." };
+
+    const acao = await db.acao.findUnique({ where: { id: acaoId } });
+    if (!acao) return { error: "Ação não encontrada." };
+
+    if (!isAdmin && acao.departamentoId !== deptId) {
+      return { error: "Acesso não autorizado para editar esta ação." };
+    }
+
+    await db.acao.update({
+      where: { id: acaoId },
+      data: { emExecucao }
+    });
+
+    revalidatePath('/dashboard');
+    revalidatePath('/admin/dashboard');
+    return { success: true, emExecucao };
+  } catch (e) {
+    console.error(e);
+    return { error: "Erro ao atualizar status da ação." };
+  }
+}
+
+export async function getAcoesStatsByDepartment() {
+  const acoes = await db.acao.findMany({
+    include: { departamento: true }
+  });
+
+  const deptStatsMap: Record<string, { total: number, emExecucao: number }> = {};
+
+  acoes.forEach(a => {
+    const deptName = a.departamento.nome;
+    if (!deptStatsMap[deptName]) {
+      deptStatsMap[deptName] = { total: 0, emExecucao: 0 };
+    }
+    
+    deptStatsMap[deptName].total++;
+    if (a.emExecucao) {
+      deptStatsMap[deptName].emExecucao++;
+    }
+  });
+
+  const chartData = Object.entries(deptStatsMap).map(([name, stat]) => ({
+    name: name,
+    emExecucao: stat.emExecucao,
+    naoIniciadas: stat.total - stat.emExecucao,
+    total: stat.total,
+    pct: stat.total > 0 ? Math.round((stat.emExecucao / stat.total) * 100) : 0
+  })).sort((a, b) => b.pct - a.pct); // Top performers first
+
+  return chartData;
+}
