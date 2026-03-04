@@ -82,6 +82,14 @@
                     {
                       "id": 2,
                       "descricao": "Assegurar a disponibilidade de recursos vinculados e de recursos próprios destinados à manutenção ordinária das Unidades Básicas de Saúde, bem como à cobertura de despesas emergenciais decorrentes de situações de urgências em saúde pública de relevância nacional, estadual ou municipal, garantindo a continuidade e a integralidade das ações de Atenção Primária."
+                    },
+                    {
+                      "id": 3,
+                      "descricao": "Promover a mudança de CEO Tipo I para Tipo II."
+                    },
+                    {
+                      "id": 4,
+                      "descricao": "Chamar concursados da especializada e recolocar os atuantes no CEO (que são concursados pela básica) para atendimento na Atenção Primária, aumetando a oferta de ESB nos territórios."
                     }
                   ]
                 }
@@ -197,11 +205,11 @@
                 },
                 {
                   "numero": "3.4",
-                  "descricao": "Diminuir a proporção de gravidez na adolescência entre as faixas etárias 10 a 19 anos",
-                  "indicador": "Proporção de gravidez na adolescência entre as faixas etárias 10 a 19 anos",
+                  "descricao": "Diminuir a percentual de gravidez na adolescência entre as faixas etárias 10 a 19 anos",
+                  "indicador": "Percentual de gravidez na adolescência entre as faixas etárias 10 a 19 anos",
                   "valor_base": "6.20%",
                   "ano_base": 2024,
-                  "unidade_medida": "Proporção",
+                  "unidade_medida": "Percentual",
                   "meta_plano_2026_2029": "5.50%",
                   "meta_fisica_2026": "6.00%",
                   "acoes": [
@@ -427,7 +435,7 @@
                     },
                     {
                       "id": 5,
-                      "descricao": "Analisar trimestralmente os dados SINASC, identificando a proporção de cesarianas."
+                      "descricao": "Analisar trimestralmente os dados SINASC, identificando a percentual de cesarianas."
                     }
                   ]
                 },
@@ -677,8 +685,8 @@
                 },
                 {
                   "numero": "2.10",
-                  "descricao": "Aumentar a proporção de vacinas selecionadas do Calendário Nacional de Vacinação para crianças menores de dois anos de idade - Pentavalente 3ª dose, Pneumocócica 10-valente 2ª dose, Poliomielite 3ª dose e Tríplice viral 1ª dose - com cobertura vacinal preconizada.",
-                  "indicador": "Proporção de vacinas selecionadas do Calendário Nacional de Vacinação para crianças menores de dois anos de idade - Pentavalente 3ª dose, Pneumocócica 10-valente 2ª dose, Poliomielite 3ª dose e Tríplice viral 1ª dose - com cobertura vacinal preconizada.",
+                  "descricao": "Aumentar a percentual de vacinas selecionadas do Calendário Nacional de Vacinação para crianças menores de dois anos de idade - Pentavalente 3ª dose, Pneumocócica 10-valente 2ª dose, Poliomielite 3ª dose e Tríplice viral 1ª dose - com cobertura vacinal preconizada.",
+                  "indicador": "Percentual de vacinas selecionadas do Calendário Nacional de Vacinação para crianças menores de dois anos de idade - Pentavalente 3ª dose, Pneumocócica 10-valente 2ª dose, Poliomielite 3ª dose e Tríplice viral 1ª dose - com cobertura vacinal preconizada.",
                   "valor_base": "25%",
                   "ano_base": 2024,
                   "unidade_medida": "Percentual",
@@ -754,14 +762,6 @@
                   "meta_plano_2026_2029": "2",
                   "meta_fisica_2026": "2",
                   "acoes": [
-                    {
-                      "id": 1,
-                      "descricao": "Promover a mudança de CEO Tipo I para Tipo II."
-                    },
-                    {
-                      "id": 2,
-                      "descricao": "Chamar concursados da especializada e recolocar os atuantes no CEO (que são concursados pela básica) para atendimento na Atenção Primária, aumetando a oferta de ESB nos territórios."
-                    },
                     {
                       "id": 3,
                       "descricao": "Monitorar e avaliar os indicadores de desempenho."
@@ -1090,7 +1090,7 @@
                       "descricao": "Monitorar mensalmente as taxas de absenteísmo."
                     }
                   ]
-                }    
+                }
               ]
             }
           ]
@@ -1150,7 +1150,7 @@
                       "descricao": "Selecionar uma Unidade Básica de Saúde piloto para implementação da teleconsulta, avaliando infraestrutura, conectividade e disponibilidade das equipes."
                     }
                   ]
-                }    
+                }
               ]
             }
           ]
@@ -1244,8 +1244,8 @@
                 },
                 {
                   "numero": "2.3",
-                  "descricao": "Aumentar a proporção de óbitos de mulheres em idade fértil (10 a 49 anos) investigados.",
-                  "indicador": "Proporção de óbitos de mulheres em idade fértil (10 a 49 anos) investigados",
+                  "descricao": "Aumentar a percentual de óbitos de mulheres em idade fértil (10 a 49 anos) investigados.",
+                  "indicador": "Percentual de óbitos de mulheres em idade fértil (10 a 49 anos) investigados",
                   "valor_base": "83.11%",
                   "ano_base": 2024,
                   "unidade_medida": "Percentual",
@@ -1392,8 +1392,8 @@
                 },
                 {
                   "numero": "2.8",
-                  "descricao": "Manter a proporção de cura dos casos novos de hanseníase diagnosticados nos anos das coortes.",
-                  "indicador": "Proporção de cura dos casos novos de hanseníase diagnosticados nos anos das coortes",
+                  "descricao": "Manter a percentual de cura dos casos novos de hanseníase diagnosticados nos anos das coortes.",
+                  "indicador": "Percentual de cura dos casos novos de hanseníase diagnosticados nos anos das coortes",
                   "valor_base": "100%",
                   "ano_base": 2024,
                   "unidade_medida": "Percentual",
@@ -1402,7 +1402,7 @@
                   "acoes": [
                     {
                       "id": 1,
-                      "descricao": "Ampliar a proporção de contatos intradomiciliares dos casos novos de hanseníase examinados nos anos de coorte."
+                      "descricao": "Ampliar a percentual de contatos intradomiciliares dos casos novos de hanseníase examinados nos anos de coorte."
                     },
                     {
                       "id": 2,
@@ -1420,8 +1420,8 @@
                 },
                 {
                   "numero": "2.9",
-                  "descricao": "Aumentar a proporção do registro de óbitos com causa básica definida.",
-                  "indicador": "Proporção do registro de óbitos com causa básica definida",
+                  "descricao": "Aumentar a percentual do registro de óbitos com causa básica definida.",
+                  "indicador": "Percentual do registro de óbitos com causa básica definida",
                   "valor_base": "98.90%",
                   "ano_base": 2024,
                   "unidade_medida": "Percentual",
@@ -1434,7 +1434,7 @@
                     },
                     {
                       "id": 3,
-                      "descricao": "Manter a proporção de óbitos investigados por causa básica definida maior ou igual ao alcançado anteriormente."
+                      "descricao": "Manter a percentual de óbitos investigados por causa básica definida maior ou igual ao alcançado anteriormente."
                     },
                     {
                       "id": 4,
@@ -1448,8 +1448,8 @@
                 },
                 {
                   "numero": "2.10",
-                  "descricao": "Aumentar a proporção de vacinas selecionadas do Calendário Nacional de Vacinação para crianças menores de dois anos de idade - Pentavalente 3ª dose, Pneumocócica 10-valente 2ª dose, Poliomielite 3ª dose e Tríplice viral 1ª dose - com cobertura vacinal preconizada.",
-                  "indicador": "Proporção de vacinas selecionadas do Calendário Nacional de Vacinação para crianças menores de dois anos de idade - Pentavalente 3ª dose, Pneumocócica 10-valente 2ª dose, Poliomielite 3ª dose e Tríplice viral 1ª dose - com cobertura vacinal preconizada.",
+                  "descricao": "Aumentar a percentual de vacinas selecionadas do Calendário Nacional de Vacinação para crianças menores de dois anos de idade - Pentavalente 3ª dose, Pneumocócica 10-valente 2ª dose, Poliomielite 3ª dose e Tríplice viral 1ª dose - com cobertura vacinal preconizada.",
+                  "indicador": "Percentual de vacinas selecionadas do Calendário Nacional de Vacinação para crianças menores de dois anos de idade - Pentavalente 3ª dose, Pneumocócica 10-valente 2ª dose, Poliomielite 3ª dose e Tríplice viral 1ª dose - com cobertura vacinal preconizada.",
                   "valor_base": "25%",
                   "ano_base": 2024,
                   "unidade_medida": "Percentual",
@@ -1488,8 +1488,8 @@
                 },
                 {
                   "numero": "2.11",
-                  "descricao": "Manter a proporção de casos de doenças de notificação compulsória imediata (DNCI) encerrados em até 60 dias após notificação.",
-                  "indicador": "Proporção de casos de doenças de notificação compulsória imediata (DNCI) encerrados em até 60 dias após notificação.",
+                  "descricao": "Manter a percentual de casos de doenças de notificação compulsória imediata (DNCI) encerrados em até 60 dias após notificação.",
+                  "indicador": "Percentual de casos de doenças de notificação compulsória imediata (DNCI) encerrados em até 60 dias após notificação.",
                   "valor_base": "90%",
                   "ano_base": 2024,
                   "unidade_medida": "Percentual",
@@ -1544,8 +1544,8 @@
                 },
                 {
                   "numero": "2.13",
-                  "descricao": "Manter a proporção de preenchimento do campo ocupação nas notificações de agravos relacionados ao trabalho.",
-                  "indicador": "Proporção de preenchimento do campo ocupação nas notificações de agravos relacionados ao trabalho.",
+                  "descricao": "Manter a percentual de preenchimento do campo ocupação nas notificações de agravos relacionados ao trabalho.",
+                  "indicador": "Percentual de preenchimento do campo ocupação nas notificações de agravos relacionados ao trabalho.",
                   "valor_base": "100%",
                   "ano_base": 2024,
                   "unidade_medida": "Percentual",
@@ -1747,8 +1747,8 @@
               "metas": [
                 {
                   "numero": "2.12",
-                  "descricao": "Aumentar a proporção de análises realizadas em amostras de água para consumo humano quanto aos parâmetros coliformes totais, cloro residual livre e turbidez.",
-                  "indicador": "Proporção de análises realizadas em amostras de água para consumo humano quanto aos parâmetros coliformes totais, cloro residual livre e turbidez",
+                  "descricao": "Aumentar a percentual de análises realizadas em amostras de água para consumo humano quanto aos parâmetros coliformes totais, cloro residual livre e turbidez.",
+                  "indicador": "Percentual de análises realizadas em amostras de água para consumo humano quanto aos parâmetros coliformes totais, cloro residual livre e turbidez",
                   "valor_base": "95.93",
                   "ano_base": 2024,
                   "unidade_medida": "Percentual",
@@ -1820,8 +1820,8 @@
                 },
                 {
                   "numero": "2.8",
-                  "descricao": "Manter a proporção de cura dos casos novos de hanseníase diagnosticados nos anos das coortes.",
-                  "indicador": "Proporção de cura dos casos novos de hanseníase diagnosticados nos anos das coortes",
+                  "descricao": "Manter a percentual de cura dos casos novos de hanseníase diagnosticados nos anos das coortes.",
+                  "indicador": "Percentual de cura dos casos novos de hanseníase diagnosticados nos anos das coortes",
                   "valor_base": "100%",
                   "ano_base": 2024,
                   "unidade_medida": "Percentual",
@@ -1836,8 +1836,8 @@
                 },
                 {
                   "numero": "2.9",
-                  "descricao": "Aumentar a proporção do registro de óbitos com causa básica definida.",
-                  "indicador": "Proporção do registro de óbitos com causa básica definida",
+                  "descricao": "Aumentar a percentual do registro de óbitos com causa básica definida.",
+                  "indicador": "Percentual do registro de óbitos com causa básica definida",
                   "valor_base": "98.90%",
                   "ano_base": 2024,
                   "unidade_medida": "Percentual",
@@ -1852,8 +1852,8 @@
                 },
                 {
                   "numero": "2.11",
-                  "descricao": "Manter a proporção de casos de doenças de notificação compulsória imediata (DNCI) encerrados em até 60 dias após notificação.",
-                  "indicador": "Proporção de casos de doenças de notificação compulsória imediata (DNCI) encerrados em até 60 dias após notificação.",
+                  "descricao": "Manter a percentual de casos de doenças de notificação compulsória imediata (DNCI) encerrados em até 60 dias após notificação.",
+                  "indicador": "Percentual de casos de doenças de notificação compulsória imediata (DNCI) encerrados em até 60 dias após notificação.",
                   "valor_base": "90%",
                   "ano_base": 2024,
                   "unidade_medida": "Percentual",
@@ -2069,7 +2069,7 @@
                       "descricao": "Submeter a PCP à Comissão Nacional de Residências."
                     }
                   ]
-                }    
+                }
               ]
             },
             {
@@ -2127,7 +2127,7 @@
                       "descricao": "Realizar, anualmente, a Mostra de Boas Práticas e Inovação em Saúde no âmbito da SMS, premiando as experiências que se destacarem."
                     }
                   ]
-                }    
+                }
               ]
             },
             {
@@ -2169,7 +2169,7 @@
                       "descricao": "Disponibilizar as informações da SMS em sites oficiais."
                     }
                   ]
-                }    
+                }
               ]
             }
           ]
@@ -2218,7 +2218,7 @@
                       "descricao": "Implementar uma planilha ou sistema eletrônico para registrar a situação de cada unidade (com alvará válido, em análise, pendente de adequação), as datas de vencimento de ambos os alvarás (expedido pelo bombeiro e pela VISA) e os apontamentos da VISA."
                     }
                   ]
-                }    
+                }
               ]
             },
             {
@@ -2240,7 +2240,7 @@
                       "descricao": "Disponibilizar recursos vinculados e próprios para a manutenção ordinária da ouvidoria do SUS na SMS, bem como, em situações de emergência em saúde pública de importância nacional/estadual/municipal."
                     }
                   ]
-                }    
+                }
               ]
             },
             {
@@ -2278,7 +2278,7 @@
                       "descricao": "Disponibilizar recursos vinculados e próprios para a manutenção ordinária do CMS, bem como, em situações de emergência em saúde pública de importância nacional/estadual/municipal."
                     }
                   ]
-                }    
+                }
               ]
             }
           ]

@@ -87,8 +87,8 @@ export function MetaCard({ meta }: { meta: any }) {
   const StatusIcon = statusConfig.icon;
 
   return (
-    <Card 
-        className="flex flex-col w-full h-auto min-h-0 shadow-sm hover:shadow-md transition-shadow border-t-4 border-t-primary/20"
+    <article 
+        className="flex flex-col w-full h-auto min-h-0 shadow-sm hover:shadow-md transition-shadow border-t-4 border-t-primary/20 bg-card text-card-foreground rounded-xl border py-6"
     >
       <CardHeader className="pb-2 shrink-0 h-auto bg-slate-50/50 rounded-t-xl border-b border-slate-100">
         <div className="flex justify-between items-center gap-2">
@@ -166,6 +166,6 @@ export function MetaCard({ meta }: { meta: any }) {
             </Button>
         </UpdateMetaSheet>
       </CardFooter>
-    </Card>
+    </article>
   )
 }

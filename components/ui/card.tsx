@@ -28,9 +28,9 @@ function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
   )
 }
 
-function CardTitle({ className, ...props }: React.ComponentProps<"div">) {
+function CardTitle({ className, ...props }: React.ComponentProps<"h3">) {
   return (
-    <div
+    <h3
       data-slot="card-title"
       className={cn("leading-snug font-semibold", className)} // Changed leading-none to leading-snug
       {...props}
