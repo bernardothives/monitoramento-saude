@@ -182,11 +182,27 @@ export async function GET(request: NextRequest) {
       archive.append(Buffer.from(pdfBytes), { name: `Relatorio_Quadrimestre_${quadrimestre}_${safeDeptName}.pdf` });
     }
 
-    await archive.finalize();
-
-    await new Promise((resolve) => {
+    // Fix Stream Deadlock: setup the promise before finalizing
+    const streamPromise = new Promise((resolve, reject) => {
       writable.on('finish', resolve);
+      writable.on('error', reject);
+      archive.on('error', reject);
+      archive.on('warning', (err) => {
+        if (err.code === 'ENOENT') {
+          console.warn('Archiver warning:', err);
+        } else {
+          reject(err);
+        }
+      });
     });
+
+    // If no PDFs were generated (all departments had no metas), archiver might hang or error. Add a dummy file.
+    if (archive.pointer() === 0) {
+      archive.append('Nenhum dado encontrado para gerar relatorios neste quadrimestre.', { name: 'Aviso.txt' });
+    }
+
+    await archive.finalize();
+    await streamPromise;
 
     const finalZipBuffer = Buffer.concat(buffers);
 
