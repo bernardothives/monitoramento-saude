@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, Legend } from 'recharts'
 import { AdminFilter } from "@/app/dashboard/admin-filter"
 import { DepartmentDashboard } from "./department-dashboard"
+import { PdfGeneratorButton } from "./pdf-generator-button"
 import { Users, Target, CheckCircle2 } from "lucide-react"
 
 interface AdminDashboardProps {
@@ -30,9 +31,12 @@ export function AdminDashboard({ stats, acoesStats, departments, currentDeptId, 
                     <h2 className="text-3xl font-bold tracking-tight">Painel de Gestão</h2>
                     <p className="text-muted-foreground">Visão Administrativa</p>
                  </div>
-                 <div className="flex items-center gap-2">
-                     <label htmlFor="dept-filter" className="text-sm font-medium">Visualizar Departamento:</label>
-                     <AdminFilter id="dept-filter" departments={departments} currentDeptId={currentDeptId} />
+                 <div className="flex flex-col sm:flex-row items-center gap-4">
+                     <PdfGeneratorButton />
+                     <div className="flex items-center gap-2">
+                         <label htmlFor="dept-filter" className="text-sm font-medium">Visualizar Departamento:</label>
+                         <AdminFilter id="dept-filter" departments={departments} currentDeptId={currentDeptId} />
+                     </div>
                  </div>
               </div>
               
