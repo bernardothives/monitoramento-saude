@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import { getCurrentUser } from "@/app/actions";
-import PDFDocument from "pdfkit";
+import { PDFDocument, StandardFonts, rgb } from "pdf-lib";
 import archiver from "archiver";
 import { Writable } from "stream";
 
@@ -25,7 +25,7 @@ export async function GET(request: NextRequest) {
                 diretriz: true
               }
             },
-            acoes: true, // +++ FETCH ACOES
+            acoes: true,
             monitoramentos: {
               where: {
                 ano: 2026,
@@ -52,27 +52,56 @@ export async function GET(request: NextRequest) {
     archive.pipe(writable);
 
     for (const dept of departments) {
-      // Generate for all departments that have metas
       if (dept.metas.length === 0) continue;
 
-      const doc = new PDFDocument({ margin: 50 });
-      const pdfBuffers: Buffer[] = [];
+      const pdfDoc = await PDFDocument.create();
+      const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
+      const fontBold = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
       
-      const pdfWritable = new Writable({
-        write(chunk, encoding, callback) {
-          pdfBuffers.push(chunk);
-          callback();
-        }
-      });
-      doc.pipe(pdfWritable);
+      let page = pdfDoc.addPage();
+      const { width, height } = page.getSize();
+      let y = height - 50;
+      const margin = 50;
+      
+      const drawText = (text: string, xPos: number, currentY: number, usedFont: any, size: number, color = rgb(0,0,0)) => {
+        // Very basic line wrap logic for pdf-lib to prevent text going off-page
+        const words = text.split(' ');
+        let line = '';
+        let resultY = currentY;
 
-      // Helper to handle text cleanly (pdfkit default fonts don't always like special chars, but Helvetica is usually ok for pt-BR)
-      doc.font('Helvetica-Bold');
-      doc.fontSize(20).text(`Relatório de Monitoramento - ${dept.nome}`, { align: 'center' });
-      doc.moveDown();
-      doc.font('Helvetica');
-      doc.fontSize(14).text(`Quadrimestre: ${quadrimestre} / Ano: 2026`, { align: 'center' });
-      doc.moveDown(2);
+        for (let n = 0; n < words.length; n++) {
+          const testLine = line + words[n] + ' ';
+          const testWidth = usedFont.widthOfTextAtSize(testLine, size);
+          if (testWidth > width - margin - xPos && n > 0) {
+            if (resultY < 50) {
+              page = pdfDoc.addPage();
+              resultY = height - 50;
+            }
+            page.drawText(line, { x: xPos, y: resultY, size, font: usedFont, color });
+            line = words[n] + ' ';
+            resultY -= (size + 4);
+          } else {
+            line = testLine;
+          }
+        }
+        if (resultY < 50) {
+            page = pdfDoc.addPage();
+            resultY = height - 50;
+        }
+        page.drawText(line, { x: xPos, y: resultY, size, font: usedFont, color });
+        return resultY - (size + 4);
+      };
+
+      // Header
+      const headerText = `Relatorio de Monitoramento - ${dept.nome}`;
+      const headerWidth = fontBold.widthOfTextAtSize(headerText, 20);
+      y = drawText(headerText, (width - headerWidth) / 2, y, fontBold, 20);
+      y -= 10;
+      
+      const subHeaderText = `Quadrimestre: ${quadrimestre} / Ano: 2026`;
+      const subHeaderWidth = font.widthOfTextAtSize(subHeaderText, 14);
+      y = drawText(subHeaderText, (width - subHeaderWidth) / 2, y, font, 14);
+      y -= 20;
 
       let currentDiretrizId = "";
       let currentObjetivoId = "";
@@ -88,14 +117,14 @@ export async function GET(request: NextRequest) {
           const objetivo = meta.objetivo;
 
           if (diretriz.id !== currentDiretrizId) {
-              doc.fontSize(14).font('Helvetica-Bold').text(`Diretriz: ${diretriz.titulo}`);
-              doc.moveDown(0.5);
+              y = drawText(`Diretriz: ${diretriz.titulo}`, margin, y, fontBold, 14);
+              y -= 10;
               currentDiretrizId = diretriz.id;
           }
 
           if (objetivo.id !== currentObjetivoId) {
-              doc.fontSize(12).font('Helvetica-Bold').text(`Objetivo: ${objetivo.titulo}`, { indent: 20 });
-              doc.moveDown(0.5);
+              y = drawText(`Objetivo: ${objetivo.titulo}`, margin + 20, y, fontBold, 12);
+              y -= 10;
               currentObjetivoId = objetivo.id;
           }
 
@@ -104,41 +133,53 @@ export async function GET(request: NextRequest) {
           const valor = mon && mon.valorRealizado !== null ? mon.valorRealizado : "N/A";
           const justificativa = mon?.justificativa || "Sem justificativa";
 
-          doc.fontSize(11).font('Helvetica-Bold').text(`Meta ${meta.numero}: ${meta.descricao}`, { indent: 40 });
-          doc.fontSize(10).font('Helvetica').text(`Meta Física 2026: ${meta.metaFisica2026} | Realizado: ${valor}`, { indent: 60 });
-          doc.text(`Status: ${status}`, { indent: 60 });
+          y = drawText(`Meta ${meta.numero}: ${meta.descricao}`, margin + 40, y, fontBold, 11);
+          y = drawText(`Meta Fisica 2026: ${meta.metaFisica2026} | Realizado: ${valor}`, margin + 60, y, font, 10);
+          
+          let statusColor = rgb(0,0,0);
+          if (status === "VERDE") statusColor = rgb(0, 0.5, 0);
+          if (status === "AMARELO") statusColor = rgb(0.8, 0.6, 0);
+          if (status === "VERMELHO") statusColor = rgb(0.8, 0, 0);
+          
+          y = drawText(`Status: ${status}`, margin + 60, y, fontBold, 10, statusColor);
+          
           if (status !== "VERDE" && status !== "PENDENTE") {
-              doc.text(`Justificativa: ${justificativa}`, { indent: 60 });
+              y = drawText(`Justificativa: ${justificativa}`, margin + 60, y, font, 10);
           }
           
           if (meta.acoes && meta.acoes.length > 0) {
-              doc.moveDown(0.5);
-              doc.font('Helvetica-Bold').text("Ações Vinculadas:", { indent: 60 });
-              doc.font('Helvetica');
+              y -= 5;
+              y = drawText("Acoes Vinculadas:", margin + 60, y, fontBold, 10);
               for (const acao of meta.acoes) {
-                  const statusAcao = acao.emExecucao ? "[Em Execução]" : "[Pendente]";
-                  doc.text(`${statusAcao} ${acao.descricao}`, { indent: 70 });
+                  const statusAcao = acao.emExecucao ? "[Em Execucao]" : "[Pendente]";
+                  y = drawText(`${statusAcao} ${acao.descricao}`, margin + 70, y, font, 10);
               }
           }
-          doc.moveDown();
+          y -= 15;
       }
 
-      doc.moveDown(4);
-      doc.fontSize(12).font('Helvetica').text("________________________________________________", { align: 'center' });
-      doc.moveDown();
-      doc.text(`Assinatura do(a) Diretor(a) do ${dept.nome}`, { align: 'center' });
-      doc.text("Data: ____/____/2026", { align: 'center' });
+      if (y < 100) {
+          page = pdfDoc.addPage();
+          y = height - 50;
+      }
 
-      doc.end();
+      y -= 30;
+      const lineText = "________________________________________________";
+      const lineWidth = font.widthOfTextAtSize(lineText, 12);
+      y = drawText(lineText, (width - lineWidth) / 2, y, font, 12);
+      
+      y -= 5;
+      const signText = `Assinatura do(a) Diretor(a) do ${dept.nome}`;
+      const signWidth = font.widthOfTextAtSize(signText, 12);
+      y = drawText(signText, (width - signWidth) / 2, y, font, 12);
 
-      await new Promise((resolve) => {
-        pdfWritable.on('finish', resolve);
-      });
+      const dateText = "Data: ____/____/2026";
+      const dateWidth = font.widthOfTextAtSize(dateText, 12);
+      y = drawText(dateText, (width - dateWidth) / 2, y, font, 12);
 
-      const deptBuffer = Buffer.concat(pdfBuffers);
-      // Remove accents and spaces for the filename
+      const pdfBytes = await pdfDoc.save();
       const safeDeptName = dept.nome.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-zA-Z0-9]/g, '_');
-      archive.append(deptBuffer, { name: `Relatorio_Quadrimestre_${quadrimestre}_${safeDeptName}.pdf` });
+      archive.append(Buffer.from(pdfBytes), { name: `Relatorio_Quadrimestre_${quadrimestre}_${safeDeptName}.pdf` });
     }
 
     await archive.finalize();
