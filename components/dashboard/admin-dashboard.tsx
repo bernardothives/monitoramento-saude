@@ -53,9 +53,12 @@ export function AdminDashboard({ stats, acoesStats, departments, currentDeptId, 
             <h2 className="text-3xl font-bold tracking-tight">Visão Geral da Prefeitura</h2>
             <p className="text-muted-foreground">Monitoramento consolidado do PAS 2026</p>
          </div>
-         <div className="flex items-center gap-2 bg-muted/30 p-2 rounded-lg border">
-             <label htmlFor="dept-filter" className="text-sm font-medium">Auditar Departamento:</label>
-             <AdminFilter id="dept-filter" departments={departments} currentDeptId={currentDeptId} />
+         <div className="flex flex-col sm:flex-row items-center gap-4">
+             <PdfGeneratorButton />
+             <div className="flex items-center gap-2 bg-muted/30 p-2 rounded-lg border">
+                 <label htmlFor="dept-filter" className="text-sm font-medium">Auditar Departamento:</label>
+                 <AdminFilter id="dept-filter" departments={departments} currentDeptId={currentDeptId} />
+             </div>
          </div>
       </div>
 
