@@ -22,7 +22,7 @@ const colors = {
 
 export async function GET(request: NextRequest) {
   const user = await getCurrentUser();
-  if (!user || !user.isAdmin) {
+  if (!user) {
     return new NextResponse("Unauthorized", { status: 401 });
   }
 
@@ -32,6 +32,7 @@ export async function GET(request: NextRequest) {
 
   try {
     const departments = await db.departamento.findMany({
+      where: user.isAdmin ? undefined : { id: user.id },
       include: {
         metas: {
           include: {
@@ -284,7 +285,23 @@ export async function GET(request: NextRequest) {
 
       const pdfBytes = await pdfDoc.save();
       const safeDeptName = dept.nome.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-zA-Z0-9]/g, '_');
+      
+      // Se não for admin, retorna o PDF diretamente
+      if (!user.isAdmin) {
+        return new NextResponse(Buffer.from(pdfBytes), {
+          headers: {
+            "Content-Type": "application/pdf",
+            "Content-Disposition": `attachment; filename="Relatorio_Quadrimestre_${quadrimestre}_${safeDeptName}.pdf"`,
+          }
+        });
+      }
+
       archive.append(Buffer.from(pdfBytes), { name: `Relatorio_Quadrimestre_${quadrimestre}_${safeDeptName}.pdf` });
+    }
+
+    // Se não for admin e não tiver metas (o loop pulou e não deu return)
+    if (!user.isAdmin) {
+        return new NextResponse("Nenhum dado encontrado para gerar o relatorio.", { status: 404 });
     }
 
     // Fix Stream Deadlock: setup the promise before finalizing

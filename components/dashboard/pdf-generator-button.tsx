@@ -20,18 +20,32 @@ export function PdfGeneratorButton() {
         throw new Error("Falha ao gerar relatórios")
       }
 
+      let filename = `Relatorio_Monitoramento_Q${quadrimestre}.pdf`;
+      const contentDisposition = response.headers.get('Content-Disposition');
+      if (contentDisposition) {
+        const filenameMatch = contentDisposition.match(/filename="?([^"]+)"?/);
+        if (filenameMatch && filenameMatch.length === 2) {
+          filename = filenameMatch[1];
+        }
+      } else {
+        // Fallback for admin if header is missing
+        if (response.headers.get('Content-Type') === 'application/zip') {
+          filename = `Relatorios_Monitoramento_Q${quadrimestre}.zip`;
+        }
+      }
+
       const blob = await response.blob()
       const url = window.URL.createObjectURL(blob)
       const a = document.createElement('a')
       a.href = url
-      a.download = `Relatorios_Monitoramento_Q${quadrimestre}.zip`
+      a.download = filename;
       document.body.appendChild(a)
       a.click()
       window.URL.revokeObjectURL(url)
       document.body.removeChild(a)
     } catch (error) {
       console.error(error)
-      alert("Erro ao gerar os relatórios em PDF. Tente novamente.")
+      alert("Erro ao gerar os relatórios. Tente novamente.")
     } finally {
       setLoading(false)
     }
@@ -39,7 +53,7 @@ export function PdfGeneratorButton() {
 
   return (
     <div className="flex items-center gap-2 bg-muted/30 p-2 rounded-lg border">
-      <label className="text-sm font-medium">Gerar Relatórios (PDF):</label>
+      <label className="text-sm font-medium">Exportar (PDF):</label>
       <Select value={quadrimestre} onValueChange={setQuadrimestre}>
         <SelectTrigger className="w-[120px] bg-background">
           <SelectValue placeholder="Quadrimestre" />
@@ -64,7 +78,7 @@ export function PdfGeneratorButton() {
         ) : (
           <>
             <Download className="mr-2 h-4 w-4" />
-            Exportar ZIP
+            Baixar Documento
           </>
         )}
       </Button>
