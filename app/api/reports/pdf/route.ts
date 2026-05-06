@@ -175,19 +175,27 @@ export async function GET(request: NextRequest) {
           const objetivo = meta.objetivo;
 
           if (diretriz.id !== currentDiretrizId) {
-              checkPageBreak(40);
+              checkPageBreak(60);
               y -= 10;
               // Diretriz Header Block
               page.drawRectangle({ x: margin, y: y - 10, width: contentWidth, height: 25, color: colors.primary });
               y = drawWrappedText(`DIRETRIZ: ${diretriz.titulo.toUpperCase()}`, margin + 10, y - 1, fontBold, 12, colors.white, contentWidth - 20);
+              y -= 5;
+              if (diretriz.descricao && diretriz.descricao.trim() !== "") {
+                  y = drawWrappedText(diretriz.descricao, margin + 10, y, font, 10, colors.textMain, contentWidth - 20);
+              }
               y -= 10;
               currentDiretrizId = diretriz.id;
           }
 
           if (objetivo.id !== currentObjetivoId) {
-              checkPageBreak(30);
+              checkPageBreak(50);
               y -= 5;
               y = drawWrappedText(`Objetivo: ${objetivo.titulo}`, margin + 5, y, fontBold, 11, colors.accent, contentWidth - 10);
+              y -= 2;
+              if (objetivo.descricao && objetivo.descricao.trim() !== "") {
+                  y = drawWrappedText(objetivo.descricao, margin + 5, y, font, 10, colors.textMuted, contentWidth - 10);
+              }
               y -= 5;
               currentObjetivoId = objetivo.id;
           }
