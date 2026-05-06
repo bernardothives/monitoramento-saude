@@ -1,9 +1,24 @@
 import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import { getCurrentUser } from "@/app/actions";
-import { PDFDocument, StandardFonts, rgb } from "pdf-lib";
+import { PDFDocument, StandardFonts, rgb, cmyk } from "pdf-lib";
 import archiver from "archiver";
 import { Writable } from "stream";
+
+// Helper colors for modern design
+const colors = {
+  primary: rgb(0.12, 0.16, 0.29),      // Slate/Dark Blue
+  secondary: rgb(0.33, 0.38, 0.45),    // Grayish
+  accent: rgb(0.15, 0.38, 0.82),       // Blue
+  lightGray: rgb(0.95, 0.96, 0.97),
+  border: rgb(0.85, 0.85, 0.85),
+  textMain: rgb(0.1, 0.1, 0.1),
+  textMuted: rgb(0.4, 0.4, 0.4),
+  success: rgb(0.13, 0.65, 0.36),      // Green
+  warning: rgb(0.91, 0.70, 0.04),      // Yellow
+  danger: rgb(0.89, 0.26, 0.26),       // Red
+  white: rgb(1, 1, 1)
+};
 
 export async function GET(request: NextRequest) {
   const user = await getCurrentUser();
@@ -60,11 +75,57 @@ export async function GET(request: NextRequest) {
       
       let page = pdfDoc.addPage();
       const { width, height } = page.getSize();
-      let y = height - 50;
-      const margin = 50;
-      
-      const drawText = (text: string, xPos: number, currentY: number, usedFont: any, size: number, color = rgb(0,0,0)) => {
-        // Very basic line wrap logic for pdf-lib to prevent text going off-page
+      let y = height;
+      const margin = 40;
+      const contentWidth = width - (margin * 2);
+      let pageNum = 1;
+
+      // Draw Header function
+      const drawPageHeader = () => {
+        // Top colored bar
+        page.drawRectangle({
+          x: 0, y: height - 10, width: width, height: 10, color: colors.accent
+        });
+        
+        y = height - 50;
+        
+        // Title
+        page.drawText("Monitoramento PAS 2026", { x: margin, y, size: 24, font: fontBold, color: colors.primary });
+        y -= 15;
+        page.drawText(`Relatorio do Departamento: ${dept.nome}`, { x: margin, y, size: 12, font: font, color: colors.secondary });
+        
+        // Date / Period badge
+        const periodText = `Quadrimestre: ${quadrimestre} / Ano: 2026`;
+        const periodWidth = fontBold.widthOfTextAtSize(periodText, 10);
+        page.drawRectangle({
+          x: width - margin - periodWidth - 10, y: y - 5,
+          width: periodWidth + 10, height: 18,
+          color: colors.lightGray,
+          borderColor: colors.border,
+          borderWidth: 1
+        });
+        page.drawText(periodText, { x: width - margin - periodWidth - 5, y: y, size: 10, font: fontBold, color: colors.primary });
+        
+        y -= 30;
+        // Divider
+        page.drawLine({
+          start: { x: margin, y }, end: { x: width - margin, y }, thickness: 1, color: colors.border
+        });
+        y -= 25;
+      };
+
+      const drawPageFooter = () => {
+        page.drawLine({
+          start: { x: margin, y: 35 }, end: { x: width - margin, y: 35 }, thickness: 1, color: colors.border
+        });
+        page.drawText(`Página ${pageNum}`, { x: width - margin - 40, y: 20, size: 9, font: font, color: colors.textMuted });
+        page.drawText(`Documento gerado automaticamente pelo Sistema de Monitoramento`, { x: margin, y: 20, size: 8, font: font, color: colors.textMuted });
+      };
+
+      // Wrap text helper
+      const drawWrappedText = (text: string, xPos: number, currentY: number, usedFont: any, size: number, color = colors.textMain, maxWidth = contentWidth) => {
+        text = text || "";
+        text = String(text).replace(/[\r\n]+/g, ' '); // Clean newlines
         const words = text.split(' ');
         let line = '';
         let resultY = currentY;
@@ -72,11 +133,9 @@ export async function GET(request: NextRequest) {
         for (let n = 0; n < words.length; n++) {
           const testLine = line + words[n] + ' ';
           const testWidth = usedFont.widthOfTextAtSize(testLine, size);
-          if (testWidth > width - margin - xPos && n > 0) {
-            if (resultY < 50) {
-              page = pdfDoc.addPage();
-              resultY = height - 50;
-            }
+          
+          if (testWidth > maxWidth && n > 0) {
+            checkPageBreak(size + 4);
             page.drawText(line, { x: xPos, y: resultY, size, font: usedFont, color });
             line = words[n] + ' ';
             resultY -= (size + 4);
@@ -84,24 +143,23 @@ export async function GET(request: NextRequest) {
             line = testLine;
           }
         }
-        if (resultY < 50) {
-            page = pdfDoc.addPage();
-            resultY = height - 50;
-        }
+        checkPageBreak(size + 4);
         page.drawText(line, { x: xPos, y: resultY, size, font: usedFont, color });
         return resultY - (size + 4);
       };
 
-      // Header
-      const headerText = `Relatorio de Monitoramento - ${dept.nome}`;
-      const headerWidth = fontBold.widthOfTextAtSize(headerText, 20);
-      y = drawText(headerText, (width - headerWidth) / 2, y, fontBold, 20);
-      y -= 10;
-      
-      const subHeaderText = `Quadrimestre: ${quadrimestre} / Ano: 2026`;
-      const subHeaderWidth = font.widthOfTextAtSize(subHeaderText, 14);
-      y = drawText(subHeaderText, (width - subHeaderWidth) / 2, y, font, 14);
-      y -= 20;
+      // Check page break and draw header/footer
+      const checkPageBreak = (neededHeight: number) => {
+        if (y - neededHeight < 60) {
+          drawPageFooter();
+          page = pdfDoc.addPage();
+          pageNum++;
+          drawPageHeader();
+        }
+      };
+
+      // INIT PAGE 1
+      drawPageHeader();
 
       let currentDiretrizId = "";
       let currentObjetivoId = "";
@@ -117,65 +175,104 @@ export async function GET(request: NextRequest) {
           const objetivo = meta.objetivo;
 
           if (diretriz.id !== currentDiretrizId) {
-              y = drawText(`Diretriz: ${diretriz.titulo}`, margin, y, fontBold, 14);
+              checkPageBreak(40);
+              y -= 10;
+              // Diretriz Header Block
+              page.drawRectangle({ x: margin, y: y - 10, width: contentWidth, height: 25, color: colors.primary });
+              y = drawWrappedText(`DIRETRIZ: ${diretriz.titulo.toUpperCase()}`, margin + 10, y - 1, fontBold, 12, colors.white, contentWidth - 20);
               y -= 10;
               currentDiretrizId = diretriz.id;
           }
 
           if (objetivo.id !== currentObjetivoId) {
-              y = drawText(`Objetivo: ${objetivo.titulo}`, margin + 20, y, fontBold, 12);
-              y -= 10;
+              checkPageBreak(30);
+              y -= 5;
+              y = drawWrappedText(`Objetivo: ${objetivo.titulo}`, margin + 5, y, fontBold, 11, colors.accent, contentWidth - 10);
+              y -= 5;
               currentObjetivoId = objetivo.id;
           }
+
+          checkPageBreak(80);
 
           const mon = meta.monitoramentos[0];
           const status = mon ? mon.statusRAG : "PENDENTE";
           const valor = mon && mon.valorRealizado !== null ? mon.valorRealizado : "N/A";
-          const justificativa = mon?.justificativa || "Sem justificativa";
+          const justificativa = mon?.justificativa || "Sem justificativa informada no periodo.";
 
-          y = drawText(`Meta ${meta.numero}: ${meta.descricao}`, margin + 40, y, fontBold, 11);
-          y = drawText(`Meta Fisica 2026: ${meta.metaFisica2026} | Realizado: ${valor}`, margin + 60, y, font, 10);
+          // Meta Block Background
+          y -= 5;
+          const startMetaY = y;
+          page.drawRectangle({ x: margin, y: y - 12, width: contentWidth, height: 16, color: colors.lightGray });
           
-          let statusColor = rgb(0,0,0);
-          if (status === "VERDE") statusColor = rgb(0, 0.5, 0);
-          if (status === "AMARELO") statusColor = rgb(0.8, 0.6, 0);
-          if (status === "VERMELHO") statusColor = rgb(0.8, 0, 0);
-          
-          y = drawText(`Status: ${status}`, margin + 60, y, fontBold, 10, statusColor);
-          
-          if (status !== "VERDE" && status !== "PENDENTE") {
-              y = drawText(`Justificativa: ${justificativa}`, margin + 60, y, font, 10);
-          }
-          
-          if (meta.acoes && meta.acoes.length > 0) {
+          y = drawWrappedText(`Meta ${meta.numero}: ${meta.descricao}`, margin + 5, y - 2, fontBold, 10, colors.textMain, contentWidth - 10);
+          y -= 8;
+
+          // Status Badge
+          let statusColor = colors.secondary;
+          let badgeText = " PENDENTE ";
+          if (status === "VERDE") { statusColor = colors.success; badgeText = " NO PRAZO (VERDE) "; }
+          if (status === "AMARELO") { statusColor = colors.warning; badgeText = " ATENCAO (AMARELO) "; }
+          if (status === "VERMELHO") { statusColor = colors.danger; badgeText = " ATRASADA (VERMELHO) "; }
+
+          const badgeWidth = fontBold.widthOfTextAtSize(badgeText, 9) + 8;
+          page.drawRectangle({ x: margin + 10, y: y - 2, width: badgeWidth, height: 13, color: statusColor });
+          page.drawText(badgeText, { x: margin + 14, y: y + 1.5, size: 8, font: fontBold, color: colors.white });
+
+          // Values
+          const valorText = `Alvo 2026: ${meta.metaFisica2026}  |  Realizado: ${valor}`;
+          page.drawText(valorText, { x: margin + badgeWidth + 25, y: y + 1, size: 9, font: font, color: colors.textMain });
+          y -= 15;
+
+          // Justificativa (if not Green/Pendente)
+          if (status === "AMARELO" || status === "VERMELHO") {
+              checkPageBreak(40);
+              page.drawText("Justificativa / Motivo:", { x: margin + 10, y, size: 9, font: fontBold, color: colors.danger });
+              y -= 12;
+              y = drawWrappedText(justificativa, margin + 10, y, font, 9, colors.textMuted, contentWidth - 20);
               y -= 5;
-              y = drawText("Acoes Vinculadas:", margin + 60, y, fontBold, 10);
+          }
+
+          // Ações
+          if (meta.acoes && meta.acoes.length > 0) {
+              checkPageBreak(30);
+              page.drawText("Ações Estratégicas Vinculadas:", { x: margin + 10, y, size: 9, font: fontBold, color: colors.textMain });
+              y -= 12;
               for (const acao of meta.acoes) {
-                  const statusAcao = acao.emExecucao ? "[Em Execucao]" : "[Pendente]";
-                  y = drawText(`${statusAcao} ${acao.descricao}`, margin + 70, y, font, 10);
+                  checkPageBreak(20);
+                  const isExec = acao.emExecucao;
+                  
+                  // Checkbox / Circle
+                  page.drawCircle({ x: margin + 14, y: y + 3, size: 3, color: isExec ? colors.success : colors.white, borderColor: isExec ? colors.success : colors.border, borderWidth: 1 });
+                  
+                  y = drawWrappedText(`${acao.descricao}`, margin + 24, y, font, 9, isExec ? colors.textMain : colors.textMuted, contentWidth - 35);
               }
           }
-          y -= 15;
+          y -= 10;
+          
+          // Bottom line for meta
+          page.drawLine({
+              start: { x: margin + 10, y: y + 5 }, end: { x: width - margin, y: y + 5 }, thickness: 0.5, color: colors.border, opacity: 0.5
+          });
       }
 
-      if (y < 100) {
-          page = pdfDoc.addPage();
-          y = height - 50;
-      }
-
-      y -= 30;
-      const lineText = "________________________________________________";
-      const lineWidth = font.widthOfTextAtSize(lineText, 12);
-      y = drawText(lineText, (width - lineWidth) / 2, y, font, 12);
+      // Signatures
+      checkPageBreak(120);
+      y -= 40;
+      const lineText = "______________________________________________________";
+      const lineWidth = font.widthOfTextAtSize(lineText, 10);
+      drawWrappedText(lineText, (width - lineWidth) / 2, y, font, 10);
+      y -= 15;
       
-      y -= 5;
-      const signText = `Assinatura do(a) Diretor(a) do ${dept.nome}`;
-      const signWidth = font.widthOfTextAtSize(signText, 12);
-      y = drawText(signText, (width - signWidth) / 2, y, font, 12);
+      const signText = `Assinatura do(a) Diretor(a) do Setor: ${dept.nome}`;
+      const signWidth = fontBold.widthOfTextAtSize(signText, 10);
+      drawWrappedText(signText, (width - signWidth) / 2, y, fontBold, 10);
+      y -= 15;
 
-      const dateText = "Data: ____/____/2026";
-      const dateWidth = font.widthOfTextAtSize(dateText, 12);
-      y = drawText(dateText, (width - dateWidth) / 2, y, font, 12);
+      const dateText = "Data: ____ / ____ / 2026";
+      const dateWidth = font.widthOfTextAtSize(dateText, 10);
+      drawWrappedText(dateText, (width - dateWidth) / 2, y, font, 10);
+
+      drawPageFooter();
 
       const pdfBytes = await pdfDoc.save();
       const safeDeptName = dept.nome.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-zA-Z0-9]/g, '_');
@@ -196,7 +293,6 @@ export async function GET(request: NextRequest) {
       });
     });
 
-    // If no PDFs were generated (all departments had no metas), archiver might hang or error. Add a dummy file.
     if (archive.pointer() === 0) {
       archive.append('Nenhum dado encontrado para gerar relatorios neste quadrimestre.', { name: 'Aviso.txt' });
     }
