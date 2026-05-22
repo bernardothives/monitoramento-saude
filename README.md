@@ -158,4 +158,3 @@ Se você está assumindo este projeto, por favor, atente-se a estas regras funda
 4.  **Ícones:** Mantenha a consistência utilizando a biblioteca `lucide-react`.
 
 ---
-*Desenvolvido com 🩵 para a Gestão de Saúde Municipal.*
