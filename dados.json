@@ -1480,7 +1480,7 @@
                 },
                 {
                   "numero": "2.11",
-                  "descricao": "Aumentar a proporção de casos de doenças de notificação compulsória imediata (DNCI) encerrados em até 60 dias após notificação.",
+                  "descricao": "Manter a proporção de casos de doenças de notificação compulsória imediata (DNCI) encerrados em até 60 dias após notificação.",
                   "indicador": "Percentual de casos de doenças de notificação compulsória imediata (DNCI) encerrados em até 60 dias após notificação.",
                   "valor_base": "90%",
                   "ano_base": 2024,
