@@ -39,6 +39,25 @@ const deptPasswords: Record<string, string> = {
 async function main() {
   console.log('🌱 Starting seed...');
 
+  // ⚠️ Safety guard: este script é DESTRUTIVO. Aborta se houver dados de uso.
+  const monitoramentoCount = await prisma.monitoramento.count();
+  const acoesEmExecucao = await prisma.acao.count({ where: { emExecucao: true } });
+  const force = process.env.CONFIRM_DESTRUCTIVE_SEED === 'true';
+
+  if ((monitoramentoCount > 0 || acoesEmExecucao > 0) && !force) {
+    console.error('⛔ ABORTING: O banco tem dados de uso (monitoramentos ou ações em execução).');
+    console.error(`   - Monitoramentos: ${monitoramentoCount}`);
+    console.error(`   - Ações em execução: ${acoesEmExecucao}`);
+    console.error('   Este script APAGA TUDO. Use `npm run update-metas` para atualizar metas sem perder dados.');
+    console.error('   Se realmente quer apagar tudo, rode: CONFIRM_DESTRUCTIVE_SEED=true npm run prisma db seed');
+    process.exit(1);
+  }
+
+  if (process.env.NODE_ENV === 'production' && !force) {
+    console.error('⛔ ABORTING: Recusa rodar seed em produção sem CONFIRM_DESTRUCTIVE_SEED=true.');
+    process.exit(1);
+  }
+
   // 1. Clear Database
   await prisma.acao.deleteMany();
   await prisma.monitoramento.deleteMany();
@@ -160,6 +179,7 @@ async function main() {
                             for (const acaoData of metaData.acoes) {
                                 await prisma.acao.create({
                                     data: {
+                                        numeroJson: acaoData.id,
                                         descricao: acaoData.descricao,
                                         metaId: meta.id,
                                         departamentoId: dept.id

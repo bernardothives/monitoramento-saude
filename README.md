@@ -114,11 +114,102 @@ npx prisma db push
 npm run prisma db seed
 ```
 
+> ⚠️ **CUIDADO COM `prisma db seed`** — esse comando é **DESTRUTIVO**:
+> apaga todos os monitoramentos quadrimestrais e o status de execução das
+> ações antes de recriar tudo a partir do `dados.json`. **Use apenas no
+> bootstrap inicial de um banco vazio.**
+>
+> Para atualizar textos/metas em um banco em uso (sem perder dados de
+> preenchimento), use o script não-destrutivo:
+>
+> ```bash
+> # 1. Veja o que seria alterado (dry-run, não escreve nada)
+> npm run update-metas
+>
+> # 2. Aplique as mudanças (preserva monitoramentos e ações em execução)
+> npm run update-metas:apply
+> ```
+>
+> O `update-metas` faz `upsert` em Diretrizes, Objetivos, Metas e Ações
+> baseado em chaves naturais estáveis (`nome` do dept, `titulo` da diretriz,
+> `numero` da meta, `id` da ação no JSON). **Nunca toca em Monitoramento
+> nem no campo `emExecucao` das ações.**
+>
+> Se algum item foi **removido** do JSON, o script avisa mas não apaga.
+> Para remover de fato, adicione `--apply-deletes` ao comando — **lembrando
+> que apagar uma Meta também apaga seus monitoramentos em cascata**.
+>
+> **Antes de qualquer manutenção em produção**, crie um snapshot do banco
+> no console do Prisma (https://console.prisma.io).
+
 ### 4. Rodar a Aplicação
 ```bash
 npm run dev
 ```
 Acesse [http://localhost:3000](http://localhost:3000) no seu navegador.
+
+---
+
+## 🛠️ Manutenção: Atualizar Diretrizes, Objetivos, Metas ou Ações
+
+Quando precisar alterar **textos, valores ou estrutura** (ex.: corrigir
+descrição de uma diretriz, mudar `meta_fisica_2026`, adicionar uma nova
+ação a uma meta existente, incluir novas metas), **NÃO** rode o seed
+em produção — você perderá todos os preenchimentos dos departamentos.
+
+### Procedimento correto
+
+1. **Backup** — antes de qualquer mudança em produção, crie um snapshot
+   no console do Prisma: https://console.prisma.io
+2. **Edite o arquivo `dados.json`** com as alterações desejadas.
+3. **Dry-run** — veja o que seria alterado, sem tocar no banco:
+   ```bash
+   npm run update-metas
+   ```
+   O script imprime cada Diretriz/Objetivo/Meta/Ação que seria criada
+   ou atualizada, e avisa sobre itens que existem no banco mas sumiram
+   do JSON (órfãos).
+4. **Aplicar** — se o dry-run estiver correto:
+   ```bash
+   npm run update-metas:apply
+   ```
+   Os dados de preenchimento (Monitoramentos quadrimestrais e
+   `emExecucao` das Ações) são **integralmente preservados**.
+
+### Identificação dos registros
+
+O `update-metas` usa chaves naturais estáveis para casar JSON ↔ banco:
+
+| Entidade   | Chave natural                                       |
+|------------|-----------------------------------------------------|
+| Departamento | `nome`                                            |
+| Diretriz   | `titulo` (montado como `DIRETRIZ ${id_no_json}`)    |
+| Objetivo   | `titulo` + diretriz pai                             |
+| Meta       | `numero` + objetivo + departamento                  |
+| Ação       | `id` (do JSON, dentro da meta) + meta pai           |
+
+⚠️ **Não mude o `id` de uma diretriz/objetivo nem o `numero` de uma meta
+em uso** — o script trataria como item novo e deixaria o antigo órfão.
+Para renomear, ajuste só `descricao`/`indicador`/etc.
+
+### Remover itens
+
+Se você remover uma meta/ação do JSON, o `update-metas` **apenas avisa**
+— não apaga. Pra apagar de fato:
+
+```bash
+npx tsx prisma/update-from-json.ts --apply --apply-deletes
+```
+
+⚠️ Apagar uma Meta apaga em cascata seus Monitoramentos. Considere se
+não é melhor manter a meta no JSON e apenas pará-la de preencher.
+
+### Por que não usar `prisma db seed`?
+
+O `seed.ts` é destrutivo por design — faz `deleteMany` em tudo antes
+de recriar. Foi feito para bootstrap inicial de banco vazio. Hoje
+possui uma trava que aborta se houver Monitoramentos ou Ações em
+execução; só roda em banco vazio ou com `CONFIRM_DESTRUCTIVE_SEED=true`.
 
 ---
 

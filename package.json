@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "update-metas": "tsx prisma/update-from-json.ts",
+    "update-metas:apply": "tsx prisma/update-from-json.ts --apply"
   },
   "prisma": {
     "seed": "npx tsx prisma/seed.ts"

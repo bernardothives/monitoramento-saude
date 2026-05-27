@@ -19,49 +19,56 @@ model Departamento {
 
 model Diretriz {
   id        String     @id @default(cuid())
-  titulo    String     // Ex: "DIRETRIZ 01: Fortalecer..."
-  descricao String     @default("") // Adicionado conforme JSON
+  titulo    String     @unique
+  descricao String     @default("")
   objetivos Objetivo[]
 }
 
 model Objetivo {
   id          String   @id @default(cuid())
-  titulo      String   // Ex: "OBJETIVO 1: Construir..."
-  descricao   String   @default("") // Adicionado conforme JSON
+  titulo      String
+  descricao   String   @default("")
   diretrizId  String
   diretriz    Diretriz @relation(fields: [diretrizId], references: [id])
   metas       Meta[]
+
+  @@unique([titulo, diretrizId])
 }
 
 model Meta {
   id             String   @id @default(cuid())
-  numero         String   // Ex: "1.1", "2.1"
-  descricao      String   // Texto descritivo da meta
-  indicadorNome  String   // Nome do indicador
-  unidadeMedida  String   // "Percentual", "Número", etc.
-  linhaBaseAno   Int      // 2024
-  linhaBaseValor Float    // Valor base inicial (convertido de string "89.52%" para 89.52)
-  metaPlano2029  String   // Meta de longo prazo (Texto ou valor)
-  metaFisica2026 Float    // O alvo numérico para o ano corrente
-  
+  numero         String
+  descricao      String
+  indicadorNome  String
+  unidadeMedida  String
+  linhaBaseAno   Int
+  linhaBaseValor Float
+  metaPlano2029  String
+  metaFisica2026 Float
+
   objetivoId     String
   objetivo       Objetivo @relation(fields: [objetivoId], references: [id])
-  
+
   departamentoId String
   departamento   Departamento @relation(fields: [departamentoId], references: [id])
 
   acoes          Acao[]
   monitoramentos Monitoramento[]
+
+  @@unique([numero, objetivoId, departamentoId])
 }
 
 model Acao {
   id             String       @id @default(cuid())
-  descricao      String       // Passo a passo da ação
-  emExecucao     Boolean      @default(false) // Track execution status
+  numeroJson     Int
+  descricao      String
+  emExecucao     Boolean      @default(false)
   metaId         String
   meta           Meta         @relation(fields: [metaId], references: [id])
   departamentoId String
   departamento   Departamento @relation(fields: [departamentoId], references: [id])
+
+  @@unique([numeroJson, metaId])
 }
 
 model Monitoramento {
